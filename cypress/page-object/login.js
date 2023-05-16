@@ -19,6 +19,14 @@ class LoginPage {
     cy.wait(1000)
   }
 
+  loginFakeEmail(password) {
+    cy.wait(1000)
+    this.elements.emailInput().type(faker.internet.email());
+    this.elements.passwordInput().type(password);
+    this.elements.loginBtn().click();
+    cy.wait(1000)
+  }
+
   loginInvalidPassword(user) {
     cy.wait(1000)
     this.elements.emailInput().type(user);
