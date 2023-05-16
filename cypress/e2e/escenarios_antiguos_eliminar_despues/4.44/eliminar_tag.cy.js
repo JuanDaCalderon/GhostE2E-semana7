@@ -1,5 +1,5 @@
-import configJson from '../../../config/config.json';
-import loginPage from "../../page-object/login";
+import configJson from '../../../../config/config.json';
+import loginPage from "../../../page-object/login";
 
 describe('Eliminar tag', () => {
     it('Se elimina un tag desde el inicio de sesión hasta la finalización de la eliminación', () => {
