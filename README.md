@@ -39,7 +39,7 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 19. Post publicado con Titulo mayor a 255
 20. Post publicado con Titulo igual a 255
 21. Post publicado con Titulo vacio y contenido
-22. Post publicado con Titulo y contenido
+22. Post publicado con Titulo y contenido vacio
 23. Crear post borrador
 24. Post borrador con Titulo mayor a 255
 25. Post borrador con Titulo igual a 255
@@ -48,7 +48,7 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 28. Editar post con Titulo mayor a 255
 29. Editar post con Titulo igual a 255
 30. Editar post con Titulo vacio y contenido
-31. Editar post con Titulo y contenido
+31. Editar post con Titulo y contenido vacio
 32. Editar post con Editar post pasar de publish to draft
 33. Editar post con Editar post pasar de draft a publicado
 34. Editar post con Editar post de draft a publish
@@ -56,7 +56,7 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 36. Editar post con URL
 37. Editar post con Feature post
 38. Editar post con autor no valido
-39. Eliminar post con 
+39. Eliminar post
 
 
 # Instrucciones para ejecutar tests - Kraken
