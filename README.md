@@ -29,10 +29,10 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 9. Crear nuevo tag con nombre y con descripción
 10. Crear nuevo tag sin nombre y con descripción
 11. Crear nuevo tag con nombre y sin descripción
-12. Crear nuevo tag con nombre de menos de 255 caracteres y descripción de menos de 500 caracteres
-13. Crear nuevo tag con nombre de más de 255 caracteres  y descripción de más de 500 caracteres
-14. Crear nuevo tag con nombre de menos de 255 caracteres y descripción de más de 500 caracteres
-15. Crear nuevo tag con nombre de más de 255 caracteres y descripción de menos de 500 caracteres
+12. Crear nuevo tag con nombre de menos de 191 caracteres y descripción de menos de 500 caracteres
+13. Crear nuevo tag con nombre de más de 191 caracteres  y descripción de más de 500 caracteres
+14. Crear nuevo tag con nombre de menos de 191 caracteres y descripción de más de 500 caracteres
+15. Crear nuevo tag con nombre de más de 191 caracteres y descripción de menos de 500 caracteres
 16. Crear nuevo tag con nombre que contenga al menos un carácter especial y un número
 
 
