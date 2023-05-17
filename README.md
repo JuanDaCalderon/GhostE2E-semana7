@@ -26,6 +26,15 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 6. Iniciar sesión, se ingresa un correo invalido (sin @, .com)
 7. Iniciar sesión, se da click en el boton "forgot password" sin escribir un correo
 8. Iniciar sesión, se da click en el boton "forgot password" escribiendo un correo
+9. Crear nuevo tag con nombre y con descripción
+10. Crear nuevo tag sin nombre y sin descripción
+11. Crear nuevo tag sin nombre y con descripción
+12. Crear nuevo tag con nombre y sin descripción
+13. Crear nuevo tag con nombre de menos de 255 caracteres y descripción de menos de 500 caracteres
+14. Crear nuevo tag con nombre de más de 255 caracteres  y descripción de más de 500 caracteres
+15. Crear nuevo tag con nombre de menos de 255 caracteres y descripción de más de 500 caracteres
+16. Crear nuevo tag con nombre de más de 255 caracteres y descripción de menos de 500 caracteres
+17. Crear nuevo tag con nombre que contenga al menos un carácter especial y un numero
 
 
 # Instrucciones para ejecutar tests - Kraken
