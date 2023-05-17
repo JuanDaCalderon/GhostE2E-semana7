@@ -77,15 +77,14 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 53.  Página, crear página con titulo de menos de 255 caracteres y descripción y publicarla
 54.  Página, crear página con titulo de menos de 255 caracteres y descripción y dejarla en borrador
 55.  Página, crear página con titulo de menos de 255 caracteres y descripción y dejarla programada
-56.  Página, crear página con titulo de 255 caracteres y publicarla
-57.  Página, crear página con titulo de mas de 255 caracteres y publicarla
-58.  Página, editar el titulo de una página con un titulo de mas de 255 caracteres
-59.  Página, crear página con un titulo y una descripción con caracteres especiales y caracteres númericos
-60.  Página, crear página con titulo pero sin descripción y publicarla
-61.  Página, crear página con contenido pero sin titulo y publicarla
-62.  Página, editar la URL de la página con un texto valido
-63.  Página, editar URL de la página con una cadena de caracteres especiales y numericos
-64.  Página, editar el campo Excerpt de la página con una cadena de menos de 300 caracteres
+56.  Página, crear página con titulo de mas de 255 caracteres y publicarla
+57.  Página, editar el titulo de una página con un titulo de mas de 255 caracteres
+58.  Página, crear página con un titulo y una descripción con caracteres especiales y caracteres númericos
+59.  Página, crear página con titulo pero sin descripción y publicarla
+60.  Página, crear página con contenido pero sin titulo y publicarla
+61.  Página, editar la URL de la página con un texto valido
+62.  Página, editar URL de la página con una cadena de caracteres especiales y numericos
+63.  Página, editar el campo Excerpt de la página con una cadena de menos de 300 caracteres
 
 
 

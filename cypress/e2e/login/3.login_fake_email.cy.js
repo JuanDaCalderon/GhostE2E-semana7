@@ -4,7 +4,7 @@ import loginPage from "../../page-object/login";
 const nameScreenshots = 'login/fake_email/login_fake_email_';
 
 describe('Escenarios Login', () => {
-    it('Se hace login con un correo que no existe pero la contraseña valida', () => {
+    it('Iniciar sesión, se ingresa una contraseña valida pero un correo no registrado.', () => {
         let i = 0
         // Given
         cy.visit(configJson.host);

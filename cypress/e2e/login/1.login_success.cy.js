@@ -4,7 +4,7 @@ import loginPage from "../../page-object/login";
 const nameScreenshots = 'login/login_success/login_success_';
 
 describe('Escenarios Login', () => {
-    it('Se hace login con un correo y contraseña validos', () => {
+    it('Iniciar sesión, se ingresa un correo y una contraseña valida', () => {
         let i = 0
         // Given
         cy.visit(configJson.host);

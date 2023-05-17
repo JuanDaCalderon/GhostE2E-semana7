@@ -4,7 +4,7 @@ import loginPage from "../../page-object/login";
 const nameScreenshots = 'login/invalid_password/login_invalid_password_';
 
 describe('Escenarios Login', () => {
-    it('Se hace login con un correo valido pero una constraseña invalida', () => {
+    it('Iniciar sesión, se ingresa un correo valido pero una contraseña invalida.', () => {
         let i = 0
         // Given
         cy.visit(configJson.host);
