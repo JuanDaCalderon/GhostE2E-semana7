@@ -26,7 +26,8 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 6. Iniciar sesión, se ingresa un correo invalido (sin @, .com)
 7. Iniciar sesión, se da click en el boton "forgot password" sin escribir un correo
 8. Iniciar sesión, se da click en el boton "forgot password" escribiendo un correo
-9. Crear nuevo tag con nombre y con descripción
+
+9.  Crear nuevo tag con nombre y con descripción
 10. Crear nuevo tag sin nombre y con descripción
 11. Crear nuevo tag con nombre y sin descripción
 12. Crear nuevo tag con nombre de menos de 191 caracteres y descripción de menos de 500 caracteres
@@ -35,6 +36,7 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 15. Crear nuevo tag con nombre de más de 191 caracteres y descripción de menos de 500 caracteres
 16. Crear nuevo tag con nombre que contenga al menos un carácter especial y un número
 17. Crear nuevo tag con descripción que contenga al menos un carácter especial y un número
+
 18. Crear post publicado
 19. Post publicado con Titulo mayor a 255
 20. Post publicado con Titulo igual a 255
