@@ -6,8 +6,8 @@ class LoginPage {
     loginBtn: () => cy.get('button.login.gh-btn'),
     forgotBtn: () => cy.get('button.forgotten-link.gh-btn'),
 
-    emailInputValidator: () => cy.get('form.gh-signin div.form-group:nth-child(2)'),
-    passwordInputValidator: () => cy.get('form.gh-signin div.form-group:nth-child(3)'),
+    emailInputValidator: () => cy.get('form.gh-signin div.form-group:nth-child(1)'),
+    passwordInputValidator: () => cy.get('form.gh-signin div.form-group:nth-child(2)'),
     errorTextValidator: () => cy.get('p.main-error'),
   }
 
@@ -56,7 +56,7 @@ class LoginPage {
 
   validateHasLoggedIn() {
     cy.wait(1000)
-    cy.url().should('include', '/dashboard');
+    cy.url().should('include', '/site');
     cy.wait(1000)
   }
 }
