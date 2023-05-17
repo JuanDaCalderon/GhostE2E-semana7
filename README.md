@@ -61,37 +61,34 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 39. Eliminar post
 
 40. invitar usuario con correo valido 
-41. invitar usuario con correo invelido
-42. invitar usuario con correo y cambiar role
-43. editar informacion general 
-44. editar informacion general con caracteres especiales, numeros y descripcion vacia
-45. editar informacion general con caracteres especiales, numeros y titulo vacio
-46. editar informacion usuario
-47. editar informacion full name limiter superior
-48. editar informacion slug limite superior
-49. editar informacion con email invalido
-50. editar informacion con location limite superior
-51. editar informacion con website invalido
-52. editar informacion con facebok limite superior
-53. editar informacion con twitter no valido
-54. editar informacion Bio limite superior 
-55. editar informacion cambiar password
-56. editar informacion old password vacio
-57. editar informacion new password y verify password diferentes
-58. editar informacion new password manos de 10 caracteres
+41. invitar usuario con correo invalido
+42. editar informacion general, titulo y descripción
+43. editar informacion general, titulo y descripción con caracteres especiales y numeros.
+44. editar informacion staff, full name limite superior
+45. editar informacion staff, slug limite superior
+46. editar informacion staff, con email invalido
+47. editar informacion staff, con location limite superior
+48. editar informacion staff, con website invalido
+49. editar informacion staff, con facebok limite superior
+50. editar informacion staff, con twitter no valido
+51. editar informacion staff, Bio limite superior 
+52. editar informacion staff, cambiar password
+53. editar informacion staff, old password vacio
+54. editar informacion staff, new password y verify password diferentes
+55. editar informacion staff, new password manos de 10 caracteres
 
-59. Página, crear página con titulo de menos de 255 caracteres y descripción y publicarla.
-60. Página, crear página con titulo de menos de 255 caracteres y descripción y dejarla en borrador.
-61. Página, crear página con titulo de menos de 255 caracteres y descripción y dejarla programada.
-62. Página, crear página con titulo de 255 caracteres y publicarla. 
-63. Página, crear página con titulo de mas de 255 caracteres y publicarla.
-64. Página, editar el titulo de una página con un titulo de mas de 255 caracteres
-65. Página, crear página con un titulo y una descripción con caracteres especiales y caracteres númericos
-66. Página, crear página con titulo pero sin descripción y publicarla
-67. Página, crear página con contenido pero sin titulo y publicarla.
-68. Página, editar la URL de la página con un texto valido
-69. Página, editar URL de la página con una cadena de caracteres especiales y numericos
-70. Página, editar el campo Excerpt de la página con una cadena de menos de 255 caracteres
+56. Página, crear página con titulo de menos de 255 caracteres y descripción y publicarla.
+57. Página, crear página con titulo de menos de 255 caracteres y descripción y dejarla en borrador.
+58. Página, crear página con titulo de menos de 255 caracteres y descripción y dejarla programada.
+59. Página, crear página con titulo de 255 caracteres y publicarla. 
+60. Página, crear página con titulo de mas de 255 caracteres y publicarla.
+61. Página, editar el titulo de una página con un titulo de mas de 255 caracteres
+62. Página, crear página con un titulo y una descripción con caracteres especiales y caracteres númericos
+63. Página, crear página con titulo pero sin descripción y publicarla
+64. Página, crear página con contenido pero sin titulo y publicarla.
+65. Página, editar la URL de la página con un texto valido
+66. Página, editar URL de la página con una cadena de caracteres especiales y numericos
+67. Página, editar el campo Excerpt de la página con una cadena de menos de 300 caracteres
 
 
 # Instrucciones para ejecutar tests - Kraken
