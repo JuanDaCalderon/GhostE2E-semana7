@@ -48,7 +48,6 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 26.  Crear post borrador con except con 300 caracteres
 27.  Crear post borrador con except mayor 300 caracteres
 28.  Crear post programadao
-#¡REF!
 29.  Editar post pasar de publish to draft
 30.  Editar post pasar de draft a publicado
 31.  Editar post de draft a publish
