@@ -20,7 +20,7 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 
 1. Iniciar sesión, se ingresa un correo y una contraseña valida.
 2. Iniciar sesión, se ingresa un correo valido pero una contraseña invalida.
-3. Iniciar sesión, se ingresa una contraseña valida pero un correo invalido.
+3. Iniciar sesión, se ingresa una contraseña valida pero un correo no registrado.
 4. Iniciar sesión, se ingresa un correo valido pero se deja la contraseña vacia.
 5. Iniciar sesión, se ingresa una contraseña pero se deja el correo vacio.
 6. Iniciar sesión, se ingresa un correo invalido (sin @, .com)
