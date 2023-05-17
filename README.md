@@ -59,6 +59,7 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 37. Editar post con Feature post
 38. Editar post con autor no valido
 39. Eliminar post
+
 40. invitar usuario con correo valido 
 41. invitar usuario con correo invelido
 42. invitar usuario con correo y cambiar role
