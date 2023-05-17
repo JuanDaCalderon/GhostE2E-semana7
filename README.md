@@ -16,11 +16,16 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 ## Notación Screenshots
 - {escenario}_p{xx}
 
-## 120 Escenarios de pruebas con generación de datos usando Faker.js y Cypress
+## 120 Escenarios de pruebas con generación de datos
 
-1. Iniciar sesión, se ingresa un correo y una contraseña valida; se valida que se haya ingresado correctamente al dashboard.
-2. Iniciar sesión, se ingresa un correo valido pero una contraseña invalida; se valida que el mensaje de error sea el correcto y que el input tenga la clase del error.
-3. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+1. Iniciar sesión, se ingresa un correo y una contraseña valida.
+2. Iniciar sesión, se ingresa un correo valido pero una contraseña invalida.
+3. Iniciar sesión, se ingresa una contraseña valida pero un correo invalido.
+4. Iniciar sesión, se ingresa un correo valido pero se deja la contraseña vacia.
+5. Iniciar sesión, se ingresa una contraseña pero se deja el correo vacio.
+6. Iniciar sesión, se ingresa un correo invalido (sin @, .com)
+7. Iniciar sesión, se da click en el boton "forgot password" sin escribir un correo
+8. Iniciar sesión, se da click en el boton "forgot password" escribiendo un correo
 
 
 # Instrucciones para ejecutar tests - Kraken
