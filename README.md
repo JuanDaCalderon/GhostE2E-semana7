@@ -77,6 +77,18 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 57. editar informacion new password y verify password diferentes
 58. editar informacion new password manos de 10 caracteres
 
+59. Página, crear página con titulo de menos de 255 caracteres y descripción y publicarla.
+60. Página, crear página con titulo de menos de 255 caracteres y descripción y dejarla en borrador.
+61. Página, crear página con titulo de menos de 255 caracteres y descripción y dejarla programada.
+62. Página, crear página con titulo de 255 caracteres y publicarla. 
+63. Página, crear página con titulo de mas de 255 caracteres y publicarla.
+64. Página, editar el titulo de una página con un titulo de mas de 255 caracteres
+65. Página, crear página con un titulo y una descripción con caracteres especiales y caracteres númericos
+66. Página, crear página con titulo pero sin descripción y publicarla
+67. Página, crear página con contenido pero sin titulo y publicarla.
+68. Página, editar la URL de la página con un texto valido
+69. Página, editar URL de la página con una cadena de caracteres especiales y numericos
+70. Página, editar el campo Excerpt de la página con una cadena de menos de 255 caracteres
 
 
 # Instrucciones para ejecutar tests - Kraken
