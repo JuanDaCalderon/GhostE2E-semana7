@@ -35,6 +35,28 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 15. Crear nuevo tag con nombre de más de 191 caracteres y descripción de menos de 500 caracteres
 16. Crear nuevo tag con nombre que contenga al menos un carácter especial y un número
 17. Crear nuevo tag con descripción que contenga al menos un carácter especial y un número
+18. Crear post publicado
+19. Post publicado con Titulo mayor a 255
+20. Post publicado con Titulo igual a 255
+21. Post publicado con Titulo vacio y contenido
+22. Post publicado con Titulo y contenido
+23. Crear post borrador
+24. Post borrador con Titulo mayor a 255
+25. Post borrador con Titulo igual a 255
+26. Post borrador con Titulo vacio y contenido
+27. Post borrador con Titulo y contenido
+28. Editar post con Titulo mayor a 255
+29. Editar post con Titulo igual a 255
+30. Editar post con Titulo vacio y contenido
+31. Editar post con Titulo y contenido
+32. Editar post con Editar post pasar de publish to draft
+33. Editar post con Editar post pasar de draft a publicado
+34. Editar post con Editar post de draft a publish
+35. Editar post con Editar post de schedule to draft
+36. Editar post con URL
+37. Editar post con Feature post
+38. Editar post con autor no valido
+39. Eliminar post con 
 
 
 # Instrucciones para ejecutar tests - Kraken
