@@ -8,7 +8,6 @@ class PagesPage {
         publishButton: () => cy.get('.gh-publishmenu-footer .gh-publishmenu-button'),
         scheduleOption: () => cy.get('.gh-publishmenu-section div.gh-publishmenu-radio:nth-child(2) .gh-publishmenu-radio-content .gh-publishmenu-radio-label'),
 
-
         settingsPageMenu: () => cy.get('button.post-settings'),
         deleteButtonPageMenu: () => cy.get('button.settings-menu-delete-button'),
         deleteButtonModal: () => cy.get('.modal-content > .modal-footer > .gh-btn-red'),
