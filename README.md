@@ -57,6 +57,26 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 37. Editar post con Feature post
 38. Editar post con autor no valido
 39. Eliminar post
+40. invitar usuario con correo valido 
+41. invitar usuario con correo invelido
+42. invitar usuario con correo y cambiar role
+43. editar informacion general 
+44. editar informacion general con caracteres especiales, numeros y descripcion vacia
+45. editar informacion general con caracteres especiales, numeros y titulo vacio
+46. editar informacion usuario
+47. editar informacion full name limiter superior
+48. editar informacion slug limite superior
+49. editar informacion con email invalido
+50. editar informacion con location limite superior
+51. editar informacion con website invalido
+52. editar informacion con facebok limite superior
+53. editar informacion con twitter no valido
+54. editar informacion Bio limite superior 
+55. editar informacion cambiar password
+56. editar informacion old password vacio
+57. editar informacion new password y verify password diferentes
+58. editar informacion new password manos de 10 caracteres
+
 
 
 # Instrucciones para ejecutar tests - Kraken
