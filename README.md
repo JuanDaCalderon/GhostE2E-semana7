@@ -34,6 +34,7 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 14. Crear nuevo tag con nombre de menos de 191 caracteres y descripción de más de 500 caracteres
 15. Crear nuevo tag con nombre de más de 191 caracteres y descripción de menos de 500 caracteres
 16. Crear nuevo tag con nombre que contenga al menos un carácter especial y un número
+17. Crear nuevo tag con descripción que contenga al menos un carácter especial y un número
 
 
 # Instrucciones para ejecutar tests - Kraken
