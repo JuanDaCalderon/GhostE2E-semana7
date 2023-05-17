@@ -18,77 +18,76 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 
 ## 120 Escenarios de pruebas con generación de datos
 
-1. Iniciar sesión, se ingresa un correo y una contraseña valida.
-2. Iniciar sesión, se ingresa un correo valido pero una contraseña invalida.
-3. Iniciar sesión, se ingresa una contraseña valida pero un correo no registrado.
-4. Iniciar sesión, se ingresa un correo valido pero se deja la contraseña vacia.
-5. Iniciar sesión, se ingresa una contraseña pero se deja el correo vacio.
-6. Iniciar sesión, se ingresa un correo invalido (sin @, .com)
-7. Iniciar sesión, se da click en el boton "forgot password" sin escribir un correo
-8. Iniciar sesión, se da click en el boton "forgot password" escribiendo un correo
+1.  Iniciar sesión, se ingresa un correo y una contraseña valida
+2.  Iniciar sesión, se ingresa un correo valido pero una contraseña invalida
+3.  Iniciar sesión, se ingresa una contraseña valida pero un correo no registrado
+4.  Iniciar sesión, se ingresa un correo valido pero se deja la contraseña vacia
+5.  Iniciar sesión, se ingresa una contraseña pero se deja el correo vacio
+6.  Iniciar sesión, se ingresa un correo invalido (sin @, 
+7.  Iniciar sesión, se da click en el boton "forgot password" sin escribir un correo
+8.  Iniciar sesión, se da click en el boton "forgot password" escribiendo un correo
 
-9.  Crear nuevo tag con nombre y con descripción
-10. Crear nuevo tag sin nombre y con descripción
-11. Crear nuevo tag con nombre y sin descripción
-12. Crear nuevo tag con nombre de menos de 191 caracteres y descripción de menos de 500 caracteres
-13. Crear nuevo tag con nombre de más de 191 caracteres  y descripción de más de 500 caracteres
-14. Crear nuevo tag con nombre de menos de 191 caracteres y descripción de más de 500 caracteres
-15. Crear nuevo tag con nombre de más de 191 caracteres y descripción de menos de 500 caracteres
-16. Crear nuevo tag con nombre que contenga al menos un carácter especial y un número
-17. Crear nuevo tag con descripción que contenga al menos un carácter especial y un número
+9.   Crear nuevo tag con nombre y con descripción
+10.  Crear nuevo tag sin nombre y con descripción
+11.  Crear nuevo tag con nombre y sin descripción
+12.  Crear nuevo tag con nombre de menos de 191 caracteres y descripción de menos de 500 caracteres
+13.  Crear nuevo tag con nombre de más de 191 caracteres  y descripción de más de 500 caracteres
+14.  Crear nuevo tag con nombre de menos de 191 caracteres y descripción de más de 500 caracteres
+15.  Crear nuevo tag con nombre de más de 191 caracteres y descripción de menos de 500 caracteres
+16.  Crear nuevo tag con nombre que contenga al menos un carácter especial y un número
+17.  Crear nuevo tag con descripción que contenga al menos un carácter especial y un número
 
-18. Crear post publicado
-19. Post publicado con Titulo mayor a 255
-20. Post publicado con Titulo igual a 255
-21. Post publicado con Titulo vacio y contenido
-22. Post publicado con Titulo y contenido vacio
-23. Crear post borrador
-24. Post borrador con Titulo mayor a 255
-25. Post borrador con Titulo igual a 255
-26. Post borrador con Titulo vacio y contenido
-27. Post borrador con Titulo y contenido
-28. Editar post con Titulo mayor a 255
-29. Editar post con Titulo igual a 255
-30. Editar post con Titulo vacio y contenido
-31. Editar post con Titulo y contenido vacio
-32. Editar post con Editar post pasar de publish to draft
-33. Editar post con Editar post pasar de draft a publicado
-34. Editar post con Editar post de draft a publish
-35. Editar post con Editar post de schedule to draft
-36. Editar post con URL
-37. Editar post con Feature post
-38. Editar post con autor no valido
-39. Eliminar post
+18.  Crear post publicado
+19.  Post publicado con Titulo mayor a 255
+20.  Post publicado con Titulo igual a 255
+21.  Post publicado con Titulo vacio y contenido
+22.  Post publicado con Titulo y contenido vacio
+23.  Crear post borrador
+24.  Crear post borrador con cuerpo mayor a la 1000000 caracteres
+25.  Crear post borrador con except menor a 300 caracteres
+26.  Crear post borrador con except con 300 caracteres
+27.  Crear post borrador con except mayor 300 caracteres
+28.  Crear post programadao
+#¡REF!
+29.  Editar post pasar de publish to draft
+30.  Editar post pasar de draft a publicado
+31.  Editar post de draft a publish
+32.  Editar post de schedule to draft
+33.  Editar post con URL
+34.  Editar post Feature
+35.  Editar post con autor no valido
+36.  Eliminar post
 
-40. invitar usuario con correo valido 
-41. invitar usuario con correo invalido
-42. editar informacion general, titulo y descripción
-43. editar informacion general, titulo y descripción con caracteres especiales y numeros.
-44. editar informacion staff, full name limite superior
-45. editar informacion staff, slug limite superior
-46. editar informacion staff, con email invalido
-47. editar informacion staff, con location limite superior
-48. editar informacion staff, con website invalido
-49. editar informacion staff, con facebok limite superior
-50. editar informacion staff, con twitter no valido
-51. editar informacion staff, Bio limite superior 
-52. editar informacion staff, cambiar password
-53. editar informacion staff, old password vacio
-54. editar informacion staff, new password y verify password diferentes
-55. editar informacion staff, new password manos de 10 caracteres
+37.  invitar usuario con correo valido 
+38.  invitar usuario con correo invalido
+39.  editar informacion general, titulo y descripción
+40.  editar informacion general, titulo y descripción con caracteres especiales y numeros
+41.  editar informacion staff, full name limite superior
+42.  editar informacion staff, slug limite superior
+43.  editar informacion staff, con email invalido
+44.  editar informacion staff, con location limite superior
+45.  editar informacion staff, con website invalido
+46.  editar informacion staff, con facebok limite superior
+47.  editar informacion staff, con twitter no valido
+48.  editar informacion staff, Bio limite superior 
+49.  editar informacion staff, cambiar password
+50.  editar informacion staff, old password vacio
+51.  editar informacion staff, new password y verify password diferentes
+52.  editar informacion staff, new password manos de 10 caracteres
 
-56. Página, crear página con titulo de menos de 255 caracteres y descripción y publicarla.
-57. Página, crear página con titulo de menos de 255 caracteres y descripción y dejarla en borrador.
-58. Página, crear página con titulo de menos de 255 caracteres y descripción y dejarla programada.
-59. Página, crear página con titulo de 255 caracteres y publicarla. 
-60. Página, crear página con titulo de mas de 255 caracteres y publicarla.
-61. Página, editar el titulo de una página con un titulo de mas de 255 caracteres
-62. Página, crear página con un titulo y una descripción con caracteres especiales y caracteres númericos
-63. Página, crear página con titulo pero sin descripción y publicarla
-64. Página, crear página con contenido pero sin titulo y publicarla.
-65. Página, editar la URL de la página con un texto valido
-66. Página, editar URL de la página con una cadena de caracteres especiales y numericos
-67. Página, editar el campo Excerpt de la página con una cadena de menos de 300 caracteres
+53.  Página, crear página con titulo de menos de 255 caracteres y descripción y publicarla
+54.  Página, crear página con titulo de menos de 255 caracteres y descripción y dejarla en borrador
+55.  Página, crear página con titulo de menos de 255 caracteres y descripción y dejarla programada
+56.  Página, crear página con titulo de 255 caracteres y publicarla
+57.  Página, crear página con titulo de mas de 255 caracteres y publicarla
+58.  Página, editar el titulo de una página con un titulo de mas de 255 caracteres
+59.  Página, crear página con un titulo y una descripción con caracteres especiales y caracteres númericos
+60.  Página, crear página con titulo pero sin descripción y publicarla
+61.  Página, crear página con contenido pero sin titulo y publicarla
+62.  Página, editar la URL de la página con un texto valido
+63.  Página, editar URL de la página con una cadena de caracteres especiales y numericos
+64.  Página, editar el campo Excerpt de la página con una cadena de menos de 300 caracteres
+
 
 
 # Instrucciones para ejecutar tests - Kraken
