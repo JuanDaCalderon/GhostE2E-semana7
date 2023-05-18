@@ -3,7 +3,7 @@ import loginPage from "../../page-object/login";
 import PagesPage from "../../page-object/pages";
 import { faker } from '@faker-js/faker';
 
-const nameScreenshots = 'pages/page_publish/page_publish_';
+const nameScreenshots = 'pages/page_draft/page_draft_';
 
 const pageData = {
     title: faker.lorem.sentence(5),
@@ -11,7 +11,7 @@ const pageData = {
 }
 
 describe('Escenarios page', () => {
-    it('Página, crear página con titulo de menos de 255 caracteres y descripción y publicarla', () => {
+    it('Página, crear página con titulo de menos de 255 caracteres y descripción y dejarla en borrador', () => {
         let i = 0
         // Given
         cy.visit(configJson.host);
@@ -24,12 +24,11 @@ describe('Escenarios page', () => {
 
         PagesPage.typeTitleAndDescription(pageData.title, pageData.description);
 
-        PagesPage.publishPage();
-
         PagesPage.goToAnchorButtonPage();
 
         // Then
         cy.get("h3.gh-content-entry-title").contains(pageData.title).should('exist');
+        cy.get("span.gh-content-status-draft").contains('Draft').should('exist');
         cy.screenshot(`${nameScreenshots}${i += 1}`, { overwrite: true });
 
         // Clean the enviroment tested
