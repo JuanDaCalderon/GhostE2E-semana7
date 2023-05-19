@@ -43,6 +43,13 @@ class PagesPage {
         cy.wait(1000)
     }
 
+    typedescription(description) {
+        cy.wait(1000)
+        this.elements.descriptionInputPage().click();
+        this.elements.descriptionInputPage().type(description, { parseSpecialCharSequences: false });
+        cy.wait(1000)
+    }
+
     typeTitleAndDescription(title, description) {
         cy.wait(1000)
         if (title !== '') {
