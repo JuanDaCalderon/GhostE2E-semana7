@@ -8,19 +8,33 @@ class PostsPage {
         publishButton: () => cy.get('.gh-publishmenu-button'),
         scheduleOption: () => cy.get('.gh-publishmenu-radio').contains('Schedule it for later').click(),
         publishOrScheduleModalButton: () => cy.get('button[class="gh-btn gh-btn-black gh-btn-icon ember-view"]'),
-        publishCloseModalButon: () => cy.get('.gh-btn-outline'),
+        publishCloseModalButon: () => cy.get('.gh-btn.gh-btn-outline.gh-btn-link'),
         
-        settingsPostMenu: () => cy.get('button.settings-menu-toggle'),
+        settingsPostMenu: () => cy.get('button.post-settings'),
         deleteButtonPostMenu: () => cy.get('button.settings-menu-delete-button'),
         deleteButtonModal: () => cy.get('.modal-content > .modal-footer > .gh-btn-red'),
 
-        postReturnButton: () => cy.get('.ml3'),
+        postReturnButton: () => cy.get('.blue.link.fw4.flex.items-center.ember-view'),
 
         selectPublishedButton: () => cy.get("a[href='#/posts/?type=published']"),
         selectScheduledButton: () => cy.get("a[href='#/posts/?type=scheduled']"),
         selectDraftButton: () => cy.get("a[href='#/posts/?type=draft']"),
+        featureFilter: () => cy.get('.ember-power-select-selected-item').contains('All post'),
+        featureFilterOption: () => cy.get('.ember-power-select-option').contains('Featured posts'),
 
-        postTitleFieldList: () => cy.get('h3.gh-content-entry-title')       
+        postTitleFieldList: () => cy.get('h3.gh-content-entry-title'),
+    
+        excerptField: () => cy.get('#custom-excerpt'),
+        featureCheckbox: () => cy.get('p').contains('Feature this'),
+        deleteAuthorButton: () => cy.get('.ember-power-select-multiple-remove-btn'),
+        authorInput: () => cy.get('.ember-power-select-trigger-multiple-input').last(),
+        authorAlert: () => cy.get('p').contains('At least one author is required.'),
+
+        publishDateInput: () => cy.get('.gh-date-time-picker-date '),
+        publishDateAlert: () => cy.get(".gh-date-time-picker-error"),
+
+        closeSettingsButton: () => cy.get('button.close.settings-menu-header-action')
+        
     }
 
     goToAnchorButtonPost() {
@@ -54,6 +68,42 @@ class PostsPage {
         cy.wait(1000)
     }
 
+    clearTitleAndTypeDescription(description) {
+        cy.wait(1000)
+        this.elements.titleInputPost().clear();
+        this.elements.descriptionInputPost().clear().type(description);
+        cy.wait(1000)
+    }
+
+    typeTitleAndClearDescription(title) {
+        cy.wait(1000)
+        this.elements.titleInputPost().clear().type(title);
+        this.elements.descriptionInputPost().clear();
+        cy.wait(1000)
+    }
+
+    clickFeatureCheckbox() {
+        cy.wait(1000)
+        this.elements.featureCheckbox().click({force:true});
+        cy.wait(1000)
+    }
+
+    deleteCurrentAuthor() {
+        cy.wait(1000)
+        this.elements.deleteAuthorButton().click();
+        cy.wait(1000)
+    } 
+
+    typeAuthor(author) {
+        cy.wait(1000)
+        this.elements.authorInput().type(author);
+        cy.wait(1000)
+    }
+
+    checkAuthorAlertExists () {
+        this.elements.authorAlert().should('exist');
+    } 
+
     openPulishDropDown() {
         cy.wait(1000)
         this.elements.dropdownPublish().click();
@@ -84,6 +134,12 @@ class PostsPage {
         cy.wait(1000)
     }
 
+    goToSettingsMenu(){
+        cy.wait(1000)
+        this.elements.settingsPostMenu().click();
+        cy.wait(1000)
+    }
+
     deletePost() {
         cy.wait(1000)
         this.elements.settingsPostMenu().click();
@@ -94,6 +150,50 @@ class PostsPage {
     deletePostModal() {
         cy.wait(1000)
         this.elements.deleteButtonModal().click();
+        cy.wait(1000)
+    }
+
+    clickExcerptfield() {
+        cy.wait(1000)
+        this.elements.excerptField().click();
+        cy.wait(1000)
+    }
+
+    typeExcerpt(excerpt) {
+        cy.wait(1000)
+        this.elements.excerptField().clear().type(excerpt);
+        cy.wait(1000)
+        this.elements.closeSettingsButton().click();
+        cy.wait(1000)
+    }
+
+    typePublishDateInput(date) {
+        cy.wait(1000)
+        this.elements.publishDateInput().clear().type(date);
+        cy.wait(1000)
+    }
+
+    clickCloseSettingsButton() {
+        cy.wait(1000)
+        this.elements.closeSettingsButton().click();
+        cy.wait(1000)
+    }
+   
+    checkExcerptMessageAlert() {
+        cy.wait(1000)
+        cy.get('p').contains('Excerpt cannot be longer than 300 characters.').should('exist');
+        cy.wait(1000)
+    }
+
+    checkPublishDateMessageAlert(state) {
+        cy.wait(1000)
+        cy.get(this.elements.publishDateAlert()).contains('Invalid date format, must be YYYY-MM-DD').should(state);
+        cy.wait(1000)
+    }
+
+    confirmExitNewPostPage() {
+        cy.wait(1000)
+        cy.get('button.gh-btn.gh-btn-red').click();
         cy.wait(1000)
     }
 
@@ -127,6 +227,36 @@ class PostsPage {
         this.elements.selectDraftButton().click();
         cy.wait(1000)
     }
+ 
+    goToFeaturedFilter() {
+        cy.wait(1000)
+        this.elements.featureFilter().click();
+        cy.wait(1000)
+        this.elements.featureFilterOption().click();
+        cy.wait(1000)
+    }
+
+    validateDeletedPost(title) {
+ 
+        cy.get("body").then($body => {
+                cy.get(".gh-date-time-picker-error").should('not.exist');     
+        });
+    }
+
+    validatepublishDateAlert() {
+
+        cy.get("form").then($form => {
+            if ($form.find("h3.gh-content-entry-title").length > 0) {   
+                cy.get("h3.gh-content-entry-title").contains(title).should('not.exist');
+            }
+        });
+    }
+    
+    validatePostinList(title) {
+        cy.get("h3.gh-content-entry-title").contains(title).should('exist');
+    }
+
 }
+
 
 module.exports = new PostsPage();
