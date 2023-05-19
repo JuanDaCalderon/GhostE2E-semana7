@@ -3,15 +3,16 @@ import loginPage from "../../page-object/login";
 import PagesPage from "../../page-object/pages";
 import { faker } from '@faker-js/faker';
 
-const nameScreenshots = 'pages/page_sin_titulo/page_sin_titulo_';
+const nameScreenshots = 'pages/page_url/page_url_';
 
 const pageData = {
-    title: '(Untitled)',
-    description: faker.lorem.paragraphs()
+    title: faker.lorem.sentence(5),
+    description: faker.lorem.paragraphs(1),
+    url: faker.lorem.sentence(1)
 }
 
 describe('Escenarios page', () => {
-    it('Página, crear página con contenido pero sin titulo y publicarla', () => {
+    it('Página, editar la URL de la página con un texto valido', () => {
         let i = 0
         // Given
         cy.visit(configJson.host);
@@ -22,7 +23,18 @@ describe('Escenarios page', () => {
 
         PagesPage.goToNewPageFromListPageView();
 
-        PagesPage.typedescription(pageData.description);
+        PagesPage.typeTitleAndDescription(pageData.title, pageData.description);
+
+        PagesPage.publishPage();
+
+        PagesPage.goToAnchorButtonPage();
+
+        const newPage = cy.get("h3.gh-content-entry-title");
+
+        newPage.contains(pageData.title).should('exist');
+        newPage.click();
+
+        PagesPage.changeUrlTo(pageData.url);
 
         PagesPage.publishPage();
 
@@ -34,7 +46,6 @@ describe('Escenarios page', () => {
 
         // Clean the enviroment tested
         PagesPage.cleanRecentPage(cy.get("h3.gh-content-entry-title").contains(pageData.title));
-
     });
 })
 

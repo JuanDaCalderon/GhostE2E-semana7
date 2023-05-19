@@ -9,13 +9,15 @@ class PagesPage {
         scheduleOption: () => cy.get('.gh-publishmenu-section div.gh-publishmenu-radio:nth-child(2) .gh-publishmenu-radio-content .gh-publishmenu-radio-label'),
 
         settingsPageMenu: () => cy.get('button.post-settings'),
+        closeSettingsPageMenu: () => cy.get('button.close.settings-menu-header-action'),
         deleteButtonPageMenu: () => cy.get('button.settings-menu-delete-button'),
         deleteButtonModal: () => cy.get('.modal-content > .modal-footer > .gh-btn-red'),
 
         buttonFilter: () => cy.get('div.gh-contentfilter-menu.gh-contentfilter-type'),
         draftFilterOption: () => cy.get('div.ember-basic-dropdown-content.ember-power-select-dropdown ul.ember-power-select-options li:nth-child(2)'),
 
-        outsideClickElement: () => cy.get('.gh-koenig-editor-pane')
+        outsideClickElement: () => cy.get('.gh-koenig-editor-pane'),
+        urlInput: () => cy.get('input.post-setting-slug')
     }
 
     goToAnchorButtonPage() {
@@ -77,6 +79,15 @@ class PagesPage {
         this.elements.publishButton().click();
         cy.wait(1000)
     }
+
+    changeUrlTo(url) {
+        cy.wait(1000);
+        this.elements.settingsPageMenu().click();
+        this.elements.urlInput().clear().type(url, { parseSpecialCharSequences: false });
+        this.elements.closeSettingsPageMenu().click();
+        cy.wait(1000);
+    }
+
 
     deletePage() {
         cy.wait(1000)
