@@ -84,6 +84,7 @@ class PagesPage {
         cy.wait(1000);
         this.elements.settingsPageMenu().click();
         this.elements.urlInput().clear().type(url, { parseSpecialCharSequences: false });
+        cy.wait(3000);
         this.elements.closeSettingsPageMenu().click();
         cy.wait(1000);
     }
