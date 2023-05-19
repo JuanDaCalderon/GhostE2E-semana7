@@ -3,16 +3,16 @@ import loginPage from "../../page-object/login";
 import PagesPage from "../../page-object/pages";
 import { faker } from '@faker-js/faker';
 
-const nameScreenshots = 'pages/page_excerpt_menos_300/page_excerpt_menos_300_';
+const nameScreenshots = 'pages/page_excerpt_mas_300/page_excerpt_mas_300_';
 
 const pageData = {
     title: faker.lorem.sentence(3),
     description: faker.lorem.paragraphs(1),
-    excerpt: faker.datatype.string(299)
+    excerpt: faker.datatype.string(301)
 }
 
 describe('Escenarios page', () => {
-    it('Página, editar el campo Excerpt de la página con una cadena de menos de 300 caracteres', () => {
+    it('Página, editar el campo Excerpt de la página con una cadena de mas de 300 caracteres', () => {
         let i = 0
         // Given
         cy.visit(configJson.host);
@@ -38,13 +38,13 @@ describe('Escenarios page', () => {
 
         PagesPage.publishPage();
 
-        PagesPage.goToAnchorButtonPage();
-
         // Then
-        cy.get("h3.gh-content-entry-title").contains(pageData.title).should('exist');
+        cy.get("div.gh-alert-content").contains('Excerpt cannot be longer than 300 characters').should('exist');
         cy.screenshot(`${nameScreenshots}${i += 1}`, { overwrite: true });
 
         // Clean the enviroment tested
+        PagesPage.goToAnchorButtonPage();
+        PagesPage.clickOnRedModalButton();
         PagesPage.cleanRecentPage(cy.get("h3.gh-content-entry-title").contains(pageData.title));
     });
 })
