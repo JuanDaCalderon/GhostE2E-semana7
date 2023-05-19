@@ -1,5 +1,8 @@
 {
     "host": "http://localhost:2368/ghost/#/signin",
     "user": "pruebasautomatizadas@uniandes.edu.co",
-    "password": "pruebasautomatizadas"
+    "password": "pruebasautomatizadas",
+
+    "mockaroo_gmail": "pruebasautomatizadas2023@gmail.com",
+    "mockaroo_gmail_password": "Pruebas@utomatizadas2023"
 }
