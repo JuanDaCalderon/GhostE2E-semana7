@@ -8,7 +8,7 @@ const nameScreenshots = 'pages/page_excerpt_menos_300/page_excerpt_menos_300_';
 const pageData = {
     title: faker.lorem.sentence(3),
     description: faker.lorem.paragraphs(1),
-    excerpt: faker.datatype.string(50)
+    excerpt: faker.datatype.string(299)
 }
 
 describe('Escenarios page', () => {
@@ -34,7 +34,7 @@ describe('Escenarios page', () => {
         newPage.contains(pageData.title).should('exist');
         newPage.click();
 
-        PagesPage.changeUrlTo(pageData.excerpt);
+        PagesPage.changeExcerptTo(pageData.excerpt);
 
         PagesPage.publishPage();
 

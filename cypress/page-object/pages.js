@@ -17,7 +17,8 @@ class PagesPage {
         draftFilterOption: () => cy.get('div.ember-basic-dropdown-content.ember-power-select-dropdown ul.ember-power-select-options li:nth-child(2)'),
 
         outsideClickElement: () => cy.get('.gh-koenig-editor-pane'),
-        urlInput: () => cy.get('input.post-setting-slug')
+        urlInput: () => cy.get('input.post-setting-slug'),
+        excerptInput: () => cy.get('textarea.post-setting-custom-excerpt'),
     }
 
     goToAnchorButtonPage() {
@@ -84,11 +85,19 @@ class PagesPage {
         cy.wait(1000);
         this.elements.settingsPageMenu().click();
         this.elements.urlInput().clear().type(url, { parseSpecialCharSequences: false });
-        cy.wait(3000);
+        cy.wait(2000);
         this.elements.closeSettingsPageMenu().click();
         cy.wait(1000);
     }
 
+    changeExcerptTo(excerpt) {
+        cy.wait(1000);
+        this.elements.settingsPageMenu().click();
+        this.elements.excerptInput().clear().type(excerpt, { parseSpecialCharSequences: false });
+        cy.wait(2000);
+        this.elements.closeSettingsPageMenu().click();
+        cy.wait(1000);
+    }
 
     deletePage() {
         cy.wait(1000)
