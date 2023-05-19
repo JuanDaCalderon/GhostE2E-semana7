@@ -11,7 +11,6 @@ describe('Escenarios Login', () => {
 
         // When
         loginPage.loginFakeEmail(configJson.password);
-        cy.screenshot(`${nameScreenshots}${i += 1}`, { overwrite: true });
 
         // Then
         loginPage.validateErrorTextFeedback('There is no user with that email address.');

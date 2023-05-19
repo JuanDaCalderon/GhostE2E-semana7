@@ -11,7 +11,6 @@ describe('Escenarios Login', () => {
 
         // When
         loginPage.login(configJson.user, configJson.password);
-        cy.screenshot(`${nameScreenshots}${i += 1}`, { overwrite: true });
 
         // Then
         loginPage.validateHasLoggedIn();
