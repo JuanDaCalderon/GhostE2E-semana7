@@ -13,7 +13,9 @@ class PagesPage {
         deleteButtonModal: () => cy.get('.modal-content > .modal-footer > .gh-btn-red'),
 
         buttonFilter: () => cy.get('div.gh-contentfilter-menu.gh-contentfilter-type'),
-        draftFilterOption: () => cy.get('div.ember-basic-dropdown-content.ember-power-select-dropdown ul.ember-power-select-options li:nth-child(2)')
+        draftFilterOption: () => cy.get('div.ember-basic-dropdown-content.ember-power-select-dropdown ul.ember-power-select-options li:nth-child(2)'),
+
+        outsideClickElement: () => cy.get('.gh-koenig-editor-pane')
     }
 
     goToAnchorButtonPage() {
@@ -35,10 +37,20 @@ class PagesPage {
         cy.wait(1000)
     }
 
-    typeTitleAndDescription(title, description) {
+    typeTitle(title) {
         cy.wait(1000)
         this.elements.titleInputPage().clear().type(title);
-        this.elements.descriptionInputPage().clear().type(description);
+        cy.wait(1000)
+    }
+
+    typeTitleAndDescription(title, description) {
+        cy.wait(1000)
+        if (title !== '') {
+            this.elements.titleInputPage().clear().type(title, { parseSpecialCharSequences: false });
+        }
+        if (description !== '') {
+            this.elements.descriptionInputPage().clear().type(description, { parseSpecialCharSequences: false });
+        }
         cy.wait(1000)
     }
 
@@ -63,6 +75,12 @@ class PagesPage {
         cy.wait(1000)
         this.elements.settingsPageMenu().click();
         this.elements.deleteButtonPageMenu().click();
+        cy.wait(1000)
+        this.elements.deleteButtonModal().click();
+        cy.wait(1000)
+    }
+
+    clickOnRedModalButton() {
         cy.wait(1000)
         this.elements.deleteButtonModal().click();
         cy.wait(1000)
