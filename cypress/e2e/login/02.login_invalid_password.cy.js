@@ -11,7 +11,6 @@ describe('Escenarios Login', () => {
 
         // When
         loginPage.loginInvalidPassword(configJson.user);
-        cy.screenshot(`${nameScreenshots}${i += 1}`, { overwrite: true });
 
         // Then
         loginPage.validateErrorTextFeedback('Your password is incorrect.');

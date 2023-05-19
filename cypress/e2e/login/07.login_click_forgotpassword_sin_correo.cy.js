@@ -1,21 +1,21 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 
-const nameScreenshots = 'login/fake_email/login_fake_email_';
+const nameScreenshots = 'tags/login/forgot_sin_email';
 
-describe('Escenarios Login', () => {
-    it('Iniciar sesión, se ingresa una contraseña valida pero un correo no registrado.', () => {
+describe('Escenarios login', () => {
+    it('Click en forgot sin email', () => {
         let i = 0
+
         // Given
         cy.visit(configJson.host);
 
         // When
-        loginPage.loginFakeEmail(configJson.password);
+        loginPage.forgotButton();
         cy.screenshot(`${nameScreenshots}${i += 1}`, { overwrite: true });
 
         // Then
-        loginPage.validateErrorTextFeedback('There is no user with that email address.');
+        loginPage.validateErrorTextFeedback('We need your email address to reset your password!');
         cy.screenshot(`${nameScreenshots}${i += 1}`, { overwrite: true });
     });
 })
-

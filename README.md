@@ -81,7 +81,7 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 57.  Página, editar la URL de la página con un texto valido
 58.  Página, editar URL de la página con una cadena de caracteres especiales y numericos
 59.  Página, editar el campo Excerpt de la página con una cadena de menos de 300 caracteres
-60.  Página, editar el campo Excerpt de la página con una cadena de menos de 300 caracteres
+60.  Página, editar el campo Excerpt de la página con una cadena de mas de 300 caracteres
 
 
 
