@@ -59,6 +59,30 @@ class LoginPage {
     cy.url().should('include', '/site');
     cy.wait(1000)
   }
+
+  emailInput(user){
+    cy.wait(1000)
+    this.elements.emailInput().type(user);
+    cy.wait(1000)
+  }
+
+  passwordInput(password){
+    cy.wait(1000)
+    this.elements.passwordInput().type(password);
+    cy.wait(1000)
+  }
+
+  loginButton(){
+    cy.wait(1000)
+    this.elements.loginBtn().click();
+    cy.wait(1000)
+  }
+
+  forgotButton(){
+    cy.wait(1000)
+    this.elements.forgotBtn().click();
+    cy.wait(1000)
+  }
 }
 
 

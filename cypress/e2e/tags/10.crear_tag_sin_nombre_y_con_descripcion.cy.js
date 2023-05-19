@@ -11,7 +11,7 @@ const tagData = {
 }
 
 describe('Escenarios tags', () => {
-    it('Crear tag con nombre y descripción validas', () => {
+    it('Crear tag sin nombre y con descripción', () => {
         let i = 0
 
         // Given

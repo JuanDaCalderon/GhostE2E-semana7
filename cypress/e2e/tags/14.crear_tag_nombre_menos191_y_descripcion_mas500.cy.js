@@ -11,7 +11,7 @@ const tagData = {
 }
 
 describe('Escenarios tags', () => {
-    it('Crear tag con nombre y descripción validas', () => {
+    it('Crear tag con nombre de menos de 191 caracteres y descripción con más de 500 caracteres', () => {
         let i = 0
 
         // Given

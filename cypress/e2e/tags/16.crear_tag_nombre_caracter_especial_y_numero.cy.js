@@ -13,7 +13,7 @@ const tagData = {
 };
 
 describe('Escenarios tags', () => {
-    it('Crear tag con nombre y descripción validas', () => {
+    it('Crear tag con nombre con caracteres especiales y números', () => {
         let i = 0
 
         // Given
