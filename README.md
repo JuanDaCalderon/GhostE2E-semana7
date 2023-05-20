@@ -120,7 +120,7 @@ De igual forma, para facilidad, los archivos se agrupan por funcionalidad en car
 93.editar_excerpt_menos_300-priori.cy.js
 94.editar_excerpt_mas_300-priori.cy.js
 
-#Kraken
+# Kraken
 101.login_correo_invalido_sin_@-aleatorio.feature
 102.login_correo_vacio_contrase¤a_valida-aleatorio.feature
 103.login_correo_valido_contrase¤a_vacia-aleatorio.feature
@@ -191,13 +191,13 @@ Desde la carpeta raiz del proyecto, `GHOSTE2E-SEMANA7`  :
 
 
 ## Descripción de las estrategias usadas y cómo se integran estas estrategias en los escenarios de pruebas
-# Pool de datos a-priori. `
+# Pool de datos a-priori. 
 Pra estos datos, se genero un dataset con la aplicacion mockaroo que se incluyo dentro del repositorio. Este dataset contiene 100 paquetes de datos diferentes con las caracteristicas requeridas para las pruebas, como longitudes especificas, con caracteres especiales, formato email, etc. El archivo se encuentra en la siguinte ruta del repositorio `cypress-ghost\data-pool\a-priori-data.json`. 
 Adicionalmente, se crearon los metodos necesarios para hacer el llamado de los datos de manera aleatorio, estos se encuentran en la siguiente ruta `cypress-ghost\cypress\helpers\prioriData.js`.
 Dentro de los archivos de los escenarios de prueba identificados el texto `-apriori` al final del nombre, se importo este archivo y llama el metodo segun el dato requerido.
 
 # Pool de datos (psudo)
-Para esto, en la aplicacion mockaro se creo un esquema llamado `pseudo-data-pool` que se consume a traves de la api https://my.api.mockaroo.com/data-pool.json?key=7d257dd0 
+Para esto, en la aplicacion mockaro se creo un esquema llamado `pseudo-data-pool` que se consume a traves de la api https://my.api.mockaroo.com/data-pool.json?key=7d257dd0 .
 En el repositorio se incluyo el archivo `cypress-ghost\cypress\helpers\apiData.js` que incluye la clase creada con los metodos para la conexion y la recuperacion de los datos desde la aplicacion. 
 Dentro de los archivos de los escenarios de prueba identificados el texto `-api` al final del nombre, se importo esta la clase y se hace el consumo del dato requerido.
 
