@@ -25,7 +25,8 @@ describe('editar usuario', () => {
       cy.screenshot("editar_usuario_p2");
 
       //And I click in User pruebas
-      cy.get('a[href="#/staff/pruebas/"]').click()
+      //cy.get('a[href="#/staff/pruebas/"]').click()
+      cy.contains('Owner').click()
       cy.wait(2000)
       cy.screenshot("editar_usuario_p3");
 
