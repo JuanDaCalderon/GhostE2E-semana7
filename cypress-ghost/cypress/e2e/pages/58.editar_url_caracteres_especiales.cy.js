@@ -5,17 +5,15 @@ import ApiDataPool from '../../helpers/apiData';
 
 const nameScreenshots = 'pages/page_url_caracteres_especiales/page_url_caracteres_especiales_';
 
-
 describe('Escenarios page', () => {
     it('Página, editar URL de la página con una cadena de caracteres especiales y numericos', async () => {
+        // Given
         const pageData = {
             title: await ApiDataPool.getRandomShortSentence(),
             description: await ApiDataPool.getRandomLongSentence(),
             url: await ApiDataPool.getRandomNaughty(),
         }
-
         let i = 0
-        // Given
         cy.visit(configJson.host);
 
         // When

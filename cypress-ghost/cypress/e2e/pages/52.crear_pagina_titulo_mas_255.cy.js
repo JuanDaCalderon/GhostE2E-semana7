@@ -8,7 +8,7 @@ const nameScreenshots = 'pages/page_titulo_mas_255/page_titulo_mas_255_';
 describe('Escenarios page', () => {
     it('Página, crear página con titulo de mas de 255 caracteres y publicarla', async () => {
         const pageData = {
-            title: await ApiDataPool.getRandomLongSentence(),
+            title: await ApiDataPool.getRandomText256(),
             description: await ApiDataPool.getRandomShortSentence()
         }
         let i = 0

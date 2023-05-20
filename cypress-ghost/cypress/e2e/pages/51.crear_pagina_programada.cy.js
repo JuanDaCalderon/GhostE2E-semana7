@@ -1,19 +1,18 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import PagesPage from "../../page-object/pages";
-import PrioriDataPool from "../../helpers/prioriData.js";
+import ApiDataPool from '../../helpers/apiData';
 
 const nameScreenshots = 'pages/page_schedule/page_schedule_';
 
-const pageData = {
-    title: PrioriDataPool.getRandomShortSentence(),
-    description: PrioriDataPool.getRandomLongSentence()
-}
-
 describe('Escenarios page', () => {
-    it('Página, crear página con titulo de menos de 255 caracteres y descripción y dejarla programada', () => {
-        let i = 0
+    it('Página, crear página con titulo de menos de 255 caracteres y descripción y dejarla programada', async () => {
         // Given
+        const pageData = {
+            title: await ApiDataPool.getRandomShortSentence(),
+            description: await ApiDataPool.getRandomLongSentence()
+        }
+        let i = 0
         cy.visit(configJson.host);
 
         // When

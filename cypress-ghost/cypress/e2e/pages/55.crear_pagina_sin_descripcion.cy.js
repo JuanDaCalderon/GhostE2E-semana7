@@ -1,19 +1,18 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import PagesPage from "../../page-object/pages";
-import { faker } from '@faker-js/faker';
+import ApiDataPool from '../../helpers/apiData';
 
 const nameScreenshots = 'pages/page_sin_descripcion/page_sin_descripcion_';
 
-const pageData = {
-    title: faker.lorem.sentence(5),
-    description: ''
-}
-
 describe('Escenarios page', () => {
-    it('Página, crear página con titulo pero sin descripción y publicarla', () => {
-        let i = 0
+    it('Página, crear página con titulo pero sin descripción y publicarla', async () => {
+        const pageData = {
+            title: await ApiDataPool.getRandomShortSentence(),
+            description: ''
+        }
         // Given
+        let i = 0
         cy.visit(configJson.host);
 
         // When

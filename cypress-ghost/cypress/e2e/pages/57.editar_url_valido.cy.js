@@ -1,20 +1,19 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import PagesPage from "../../page-object/pages";
-import { faker } from '@faker-js/faker';
+import ApiDataPool from '../../helpers/apiData';
 
 const nameScreenshots = 'pages/page_url/page_url_';
 
-const pageData = {
-    title: faker.lorem.sentence(5),
-    description: faker.lorem.paragraphs(1),
-    url: faker.lorem.sentence(1)
-}
-
 describe('Escenarios page', () => {
-    it('Página, editar la URL de la página con un texto valido', () => {
-        let i = 0
+    it('Página, editar la URL de la página con un texto valido', async () => {
         // Given
+        const pageData = {
+            title: await ApiDataPool.getRandomShortSentence(),
+            description: await ApiDataPool.getRandomLongSentence(),
+            url: await ApiDataPool.getRandomWord()
+        }
+        let i = 0
         cy.visit(configJson.host);
 
         // When

@@ -1,18 +1,18 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import PagesPage from "../../page-object/pages";
-import ApiDataPool from '../../helpers/apiData';
+import PrioriDataPool from "../../helpers/prioriData";
 
-const nameScreenshots = 'pages/page_sin_titulo/page_sin_titulo_';
+const nameScreenshots = 'pages/page_publish/page_publish_';
 
+const pageData = {
+    title: PrioriDataPool.getRandomShortSentence(),
+    description: PrioriDataPool.getRandomLongSentence()
+}
 
 describe('Escenarios page', () => {
-    it('Página, crear página con contenido pero sin titulo y publicarla', async () => {
+    it('Página, crear página con titulo de menos de 255 caracteres y descripción y publicarla', () => {
         // Given
-        const pageData = {
-            title: '(Untitled)',
-            description: await ApiDataPool.getRandomLongSentence()
-        }
         let i = 0
         cy.visit(configJson.host);
 
@@ -22,7 +22,7 @@ describe('Escenarios page', () => {
 
         PagesPage.goToNewPageFromListPageView();
 
-        PagesPage.typedescription(pageData.description);
+        PagesPage.typeTitleAndDescription(pageData.title, pageData.description);
 
         PagesPage.publishPage();
 
@@ -34,7 +34,6 @@ describe('Escenarios page', () => {
 
         // Clean the enviroment tested
         PagesPage.cleanRecentPage(cy.get("h3.gh-content-entry-title").contains(pageData.title));
-
     });
 })
 
