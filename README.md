@@ -190,15 +190,17 @@ Desde la carpeta raiz del proyecto, `GHOSTE2E-SEMANA7`  :
 * Elegir el que se desee ejecutar
 
 
-##Descripción de las estrategias usadas y cómo se integran estas estrategias en los escenarios de pruebas
+## Descripción de las estrategias usadas y cómo se integran estas estrategias en los escenarios de pruebas
 # Pool de datos a-priori. `
 Pra estos datos, se genero un dataset con la aplicacion mockaroo que se incluyo dentro del repositorio. Este dataset contiene 100 paquetes de datos diferentes con las caracteristicas requeridas para las pruebas, como longitudes especificas, con caracteres especiales, formato email, etc. El archivo se encuentra en la siguinte ruta del repositorio `cypress-ghost\data-pool\a-priori-data.json`. 
 Adicionalmente, se crearon los metodos necesarios para hacer el llamado de los datos de manera aleatorio, estos se encuentran en la siguiente ruta `cypress-ghost\cypress\helpers\prioriData.js`.
-Dentro de los archivos de los escenarios de prueba se importo este archivo y llama el metodo segun el dato requerido.
+Dentro de los archivos de los escenarios de prueba identificados el texto `-apriori` al final del nombre, se importo este archivo y llama el metodo segun el dato requerido.
 
-# Pool de datos (pesudo)
-Para esto, en la aplicacion mockarro se creo un esquema llamado `pseudo-data-pool` que se consume a traves de 
+# Pool de datos (psudo)
+Para esto, en la aplicacion mockaro se creo un esquema llamado `pseudo-data-pool` que se consume a traves de la api https://my.api.mockaroo.com/data-pool.json?key=7d257dd0 
+En el repositorio se incluyo el archivo `cypress-ghost\cypress\helpers\apiData.js` que incluye la clase creada con los metodos para la conexion y la recuperacion de los datos desde la aplicacion. 
+Dentro de los archivos de los escenarios de prueba identificados el texto `-api` al final del nombre, se importo esta la clase y se hace el consumo del dato requerido.
 
-
-
- pool de datos (pseudo) aleatorio dinámico y escenario aleatorio.
+# escenario aleatorio
+Para esto, se instalo la libreria faker.
+Dentro de los archivos de los escenarios de prueba identificados el texto `-aleatorio` al final del nombre, se importo la libreria y se incluyen los metodos de faker segun el dato requerido.
