@@ -1,6 +1,10 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 
+let postData = {
+  mail: faker.internet.email()
+}
+
 describe('invitar usuario', () => {
     it('Se hace invitacion a un usuario', () => {
       //Given I navigate to page "http://localhost:2368/ghost"  
@@ -21,7 +25,7 @@ describe('invitar usuario', () => {
       cy.screenshot("invitar_usuario_p3");
 
       //And I enter email invitation
-      cy.get('input[name="email"]').type('prueba@prueba.com')
+      cy.get('input[name="email"]').type(postData.mail)
       cy.wait(2000)
       cy.screenshot("invitar_usuario_p4");
 

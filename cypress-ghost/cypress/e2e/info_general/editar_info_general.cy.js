@@ -1,5 +1,11 @@
+import { faker } from '@faker-js/faker';
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
+
+let postData = {
+  title: faker.random.alpha(50),
+  description: faker.random.alpha(100),
+}
 
 describe('edit info general', () => {
     it('Editar informacion titulo y descripcion de la pagina ', () => {
@@ -23,12 +29,12 @@ describe('edit info general', () => {
 
       //And I enter name user
       //cy.get('button[class="form-group ember-view"]').clear().type('pruebas automatizadas 3',{force: true})
-      cy.contains('The name of your site').parent().find('input').clear().type('pruebas automatizadas 3',{force: true})
+      cy.contains('The name of your site').parent().find('input').clear().type(postData.title,{force: true})
       cy.wait(2000)
 
       //And I entre description
       //cy.get('button[class="description-container form-group ember-view"]').clear().type('descripicio de pruebas automatizadas',{force: true})
-      cy.contains('Used in your theme, meta data and search results').parent().find('input').clear().type('descripción de pruebas automatizadas',{force: true})
+      cy.contains('Used in your theme, meta data and search results').parent().find('input').clear().type(postData.description,{force: true})
       cy.wait(2000)
       cy.screenshot("editar_info_general_p4");
 
