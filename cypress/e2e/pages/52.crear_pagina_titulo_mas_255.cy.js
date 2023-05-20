@@ -1,17 +1,16 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import PagesPage from "../../page-object/pages";
-import { faker } from '@faker-js/faker';
+import ApiDataPool from '../../helpers/apiData';
 
 const nameScreenshots = 'pages/page_titulo_mas_255/page_titulo_mas_255_';
 
-const pageData = {
-    title: faker.lorem.words(50),
-    description: faker.lorem.paragraphs(1)
-}
-
 describe('Escenarios page', () => {
-    it('Página, crear página con titulo de mas de 255 caracteres y publicarla', () => {
+    it('Página, crear página con titulo de mas de 255 caracteres y publicarla', async () => {
+        const pageData = {
+            title: await ApiDataPool.getRandomLongSentence(),
+            description: await ApiDataPool.getRandomShortSentence()
+        }
         let i = 0
         // Given
         cy.visit(configJson.host);

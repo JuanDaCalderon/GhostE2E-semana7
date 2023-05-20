@@ -102,8 +102,9 @@ class PagesPage {
     deletePage() {
         cy.wait(1000)
         this.elements.settingsPageMenu().click();
+        cy.wait(2000)
         this.elements.deleteButtonPageMenu().click();
-        cy.wait(1000)
+        cy.wait(2000)
         this.elements.deleteButtonModal().click();
         cy.wait(1000)
     }

@@ -1,18 +1,19 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import PagesPage from "../../page-object/pages";
-import { faker } from '@faker-js/faker';
+import ApiDataPool from '../../helpers/apiData';
 
 const nameScreenshots = 'pages/page_url_caracteres_especiales/page_url_caracteres_especiales_';
 
-const pageData = {
-    title: faker.lorem.sentence(5),
-    description: faker.lorem.paragraphs(1),
-    url: faker.datatype.string(25)
-}
 
 describe('Escenarios page', () => {
-    it('Página, editar URL de la página con una cadena de caracteres especiales y numericos', () => {
+    it('Página, editar URL de la página con una cadena de caracteres especiales y numericos', async () => {
+        const pageData = {
+            title: await ApiDataPool.getRandomShortSentence(),
+            description: await ApiDataPool.getRandomLongSentence(),
+            url: await ApiDataPool.getRandomNaughty(),
+        }
+
         let i = 0
         // Given
         cy.visit(configJson.host);

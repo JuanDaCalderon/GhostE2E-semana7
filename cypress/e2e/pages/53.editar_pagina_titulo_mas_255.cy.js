@@ -1,18 +1,17 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import PagesPage from "../../page-object/pages";
-import { faker } from '@faker-js/faker';
+import ApiDataPool from '../../helpers/apiData';
 
 const nameScreenshots = 'pages/page_edit_titulo_mas_255/page_edit_titulo_mas_255_';
 
-const pageData = {
-    title: faker.lorem.sentence(5),
-    titleToEdit: faker.lorem.words(50),
-    description: faker.lorem.paragraphs(1)
-}
-
 describe('Escenarios page', () => {
-    it('Página, editar el titulo de una página con un titulo de mas de 255 caracteres', () => {
+    it('Página, editar el titulo de una página con un titulo de mas de 255 caracteres', async () => {
+        const pageData = {
+            title: await ApiDataPool.getRandomShortSentence(),
+            titleToEdit: await ApiDataPool.getRandomLongSentence(),
+            description: await ApiDataPool.getRandomShortSentence()
+        }
         let i = 0
         // Given
         cy.visit(configJson.host);

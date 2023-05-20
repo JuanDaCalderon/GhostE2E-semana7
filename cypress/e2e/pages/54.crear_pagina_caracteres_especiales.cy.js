@@ -1,13 +1,13 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import PagesPage from "../../page-object/pages";
-import { faker } from '@faker-js/faker';
+import PrioriDataPool from "../../helpers/prioriData.js";
 
 const nameScreenshots = 'pages/page_crear_caracteres_especiales/page_crear_caracteres_especiales_';
 
 const pageData = {
-    title: faker.datatype.string(20),
-    description: faker.datatype.string(300)
+    title: PrioriDataPool.getRandomNaughty(),
+    description: PrioriDataPool.getRandomNaughty()
 }
 
 describe('Escenarios page', () => {

@@ -1,13 +1,13 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import PagesPage from "../../page-object/pages";
-import { faker } from '@faker-js/faker';
+import PrioriDataPool from "../../helpers/prioriData.js";
 
 const nameScreenshots = 'pages/page_schedule/page_schedule_';
 
 const pageData = {
-    title: faker.lorem.sentence(5),
-    description: faker.lorem.paragraphs()
+    title: PrioriDataPool.getRandomShortSentence(),
+    description: PrioriDataPool.getRandomLongSentence()
 }
 
 describe('Escenarios page', () => {
