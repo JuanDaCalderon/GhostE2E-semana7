@@ -4,7 +4,7 @@ import loginPage from "../../page-object/login";
 import Usuario from "../../page-object/usuario";
 
 let postData = {
-  name: faker.random.alpha(100)
+  name: faker.random.alpha(2000),
 }
 
 
@@ -28,7 +28,7 @@ describe('editar usuario', () => {
       cy.screenshot("editar_usuario_p3");
 
       //And I enter user name
-      cy.get('input[id="user-name"]').clear().type(postData.name,{force: true})
+      cy.get('input[id="user-slug"]').clear().type(postData.name,{force: true})
       cy.wait(2000)
       cy.screenshot("editar_usuario_p4");
 
@@ -41,6 +41,7 @@ describe('editar usuario', () => {
       cy.get(".gh-canvas-title > a[href='#/staff/']").click();
       cy.wait(2000)
       cy.screenshot("editar_usuario_p6");
+      
       
     })
 })

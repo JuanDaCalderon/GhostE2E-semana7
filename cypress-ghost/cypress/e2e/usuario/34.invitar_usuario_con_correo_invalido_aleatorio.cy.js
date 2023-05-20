@@ -1,6 +1,11 @@
+import { faker } from '@faker-js/faker';
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import Usuario from "../../page-object/usuario";
+
+let postData = {
+  mail: faker.random.alphaNumeric(20)
+}
 
 describe('invitar usuario', () => {
     it('Se hace invitacion a un usuario', () => {
