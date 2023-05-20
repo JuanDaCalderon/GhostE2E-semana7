@@ -1,0 +1,20 @@
+{
+  "name": "ghost-kraken",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "kraken": "./node_modules/kraken-node/bin/kraken-node run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "kraken-node": "^1.0.24",
+    "selenium-webdriver": "^4.9.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0"
+  }
+}
