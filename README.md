@@ -37,21 +37,21 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 16.  Crear nuevo tag con nombre que contenga al menos un carácter especial y un número
 17.  Crear nuevo tag con descripción que contenga al menos un carácter especial y un número
 
-18.  Crear post publicado
-19.  Post publicado con Titulo mayor a 255
-20.  Post publicado con Titulo igual a 255
-21.  Post publicado con Titulo vacio y contenido
-22.  Post publicado con Titulo y contenido vacio
-23.  Crear post borrador
-24.  Crear post borrador con cuerpo mayor a la 1000000 caracteres
-25.  Crear post borrador con except menor a 300 caracteres
-26.  Crear post borrador con except con 300 caracteres
-27.  Crear post borrador con except mayor 300 caracteres
-28.  Crear post programadao
-29.  Editar post con URL
-30.  Editar post seleccionando Feature
-31.  Editar post con autor no valido
-32.  Eliminar post
+18. Crear post borrador con titulo y contenido
+19. Crear post programado con campo excerpt de 299 caracteres
+20. Crear post programado con campo excerpt de 300 caracteres (frontera)
+21. Crear post programado con campo excerpt de 301 caracteres (fontera +1)
+22. Crear post programado con titulo y contenido
+23. Crear post publicado con fecha invalida
+24. Crear post publicado con titulo de 100 caracteres y contenido vacio
+25. Crear post publicado con titulo igual 255 caract
+26. Crear post publicado con titulo de mas de 255 caracteres
+27. Crear post publicado con titulo vacio y contenido de 100 caracteres
+28. Crear post publicado con titulo y contenido
+29. Editar post con autor invalido
+30. Editar post seleccionando feature
+31. Editar post titulo y contenido
+32. Eiminar post
 
 33.  invitar usuario con correo valido 
 34.  invitar usuario con correo invalido
