@@ -125,28 +125,41 @@ De igual forma, para facilidad, los archivos se agrupan por funcionalidad en car
 98.invitar_usuario_con_correo_invalido_apriori.cy.js
 99.editar_informacion_staff_full_name_limite_superior_apriori.cy.js
 100.editar_informacion_staff_slug_limite_superior_apriori.cy.js
+101.editar_informacion_staff_con_email_invalido_apriori.cy.js
+102.editar_informacion_staff_con_location_limite_superior_apriori.cy.js
+103.editar_informacion_staff_con_website_invalido_apriori.cy.js
+104.editar_informacion_staff_con_facebok_limite_superior_apriori.cy.js
+105.editar_informacion_staff_con_twitter_no_valido_apriori.cy.js
+106.editar_informacion_staff_Bio_limite_superior_apriori.cy.js
+107.editar_informacion_staff_cambiar_password_apriori.cy.js
+108.editar_informacion_staff_old_password_vacio_apriori.cy.js
+109.editar_informacion_staff_new_password_y_verify_password_diferentes_apriori.cy.js
+110.editar_informacion_staff_new_password_menos_de_10_caracteres_apriori.cy.js
+111.editar_usuario_apriori.cy.js
+112.editar_informacion_general_titulo_y_descripción_apriori.cy.js
+113.editar_informacion_general_titulo_y_descripción_con_caracteres_especiales_y_numeros_apriori.cy.js
 
 # Kraken
-- 101.login_correo_invalido_sin_@-aleatorio.feature
-- 102.login_correo_vacio_contrase¤a_valida-aleatorio.feature
-- 103.login_correo_valido_contrase¤a_vacia-aleatorio.feature
-- 104.crear_page_schedule-aleatorio.feature
-- 105.crear_page-aleatorio.feature
-- 106.editar_page-aleatorio.feature
-- 107.eliminar_page-aleatorio.feature
-- 108.filtrar_pagina-aleatorio.feature
-- 109.crear_post_borrador-aletorio.feature
-- 110.crear_post_programado-aleatorio.feature
-- 111.crear_post_publicado-aletorio.feature
-- 112.editar_post-aletorio.feature
-- 113.eliminar_post-aletorio.feature
-- 114.crear_tag_con_nombre_y_descripcion-aleatorio.feature
-- 115.crear_tag_con_nombre_y_sin_descripcion-aleatorio.feature
-- 116.crear_tag_sin_nombre_y_con_descripcion-aleatorio.feature
-- 117.edit_info_usuario_aleatorio.feature
-- 118.invitar_usuario_aleatorio.feature
-- 119.invitar_usuario_email_invalido_aleatorio.feature
-- 120. edit_info_general_aleatorio.feature
+- 114.login_correo_invalido_sin_@-aleatorio.feature
+- 115.login_correo_vacio_contrase¤a_valida-aleatorio.feature
+- 116.login_correo_valido_contrase¤a_vacia-aleatorio.feature
+- 117.crear_page_schedule-aleatorio.feature
+- 118.crear_page-aleatorio.feature
+- 119.editar_page-aleatorio.feature
+- 120.eliminar_page-aleatorio.feature
+- 121.filtrar_pagina-aleatorio.feature
+- 122.crear_post_borrador-aletorio.feature
+- 123.crear_post_programado-aleatorio.feature
+- 124.crear_post_publicado-aletorio.feature
+- 125.editar_post-aletorio.feature
+- 126.eliminar_post-aletorio.feature
+- 127.crear_tag_con_nombre_y_descripcion-aleatorio.feature
+- 128.crear_tag_con_nombre_y_sin_descripcion-aleatorio.feature
+- 129.crear_tag_sin_nombre_y_con_descripcion-aleatorio.feature
+- 130.edit_info_usuario_aleatorio.feature
+- 131.invitar_usuario_aleatorio.feature
+- 132.invitar_usuario_email_invalido_aleatorio.feature
+- 133.edit_info_general_aleatorio.feature
 
 # Incidentes
 
