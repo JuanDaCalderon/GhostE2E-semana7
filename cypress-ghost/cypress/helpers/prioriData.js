@@ -47,6 +47,16 @@ class PrioriDataPool {
         return this.dataPool[index].Naughty;
     }
 
+    getRandomText256() {
+        const index = this.getRandomIndex(100);
+        return this.dataPool[index].text_256;
+    }
+
+    getRandomWord() {
+        const index = this.getRandomIndex(100);
+        return this.dataPool[index].word;
+    }
+
     getRandomtagName20() {
         const index = this.getRandomIndex(100);
         return this.dataPool[index].tagName20;
