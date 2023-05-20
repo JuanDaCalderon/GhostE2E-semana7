@@ -123,26 +123,26 @@ De igual forma, para facilidad, los archivos se agrupan por funcionalidad en car
 96.login_correo_valido_contraseña_vacia_a-priori.cy.js
 
 # Kraken
-101.login_correo_invalido_sin_@-aleatorio.feature
-102.login_correo_vacio_contrase¤a_valida-aleatorio.feature
-103.login_correo_valido_contrase¤a_vacia-aleatorio.feature
-104.crear_page_schedule-aleatorio.feature
-105.crear_page-aleatorio.feature
-106.editar_page-aleatorio.feature
-107.eliminar_page-aleatorio.feature
-108.filtrar_pagina-aleatorio.feature
-109.crear_post_borrador-aletorio.feature
-110.crear_post_programado-aleatorio.feature
-111.crear_post_publicado-aletorio.feature
-112.editar_post-aletorio.feature
-113.eliminar_post-aletorio.feature
-114.crear_tag_con_nombre_y_descripcion-aleatorio.feature
-115.crear_tag_con_nombre_y_sin_descripcion-aleatorio.feature
-116.crear_tag_sin_nombre_y_con_descripcion-aleatorio.feature
-117.edit_info_usuario_aleatorio.feature
-118.invitar_usuario_aleatorio.feature
-119.invitar_usuario_email_invalido_aleatorio.feature
-120. edit_info_general_aleatorio.feature
+- 101.login_correo_invalido_sin_@-aleatorio.feature
+- 102.login_correo_vacio_contrase¤a_valida-aleatorio.feature
+- 103.login_correo_valido_contrase¤a_vacia-aleatorio.feature
+- 104.crear_page_schedule-aleatorio.feature
+- 105.crear_page-aleatorio.feature
+- 106.editar_page-aleatorio.feature
+- 107.eliminar_page-aleatorio.feature
+- 108.filtrar_pagina-aleatorio.feature
+- 109.crear_post_borrador-aletorio.feature
+- 110.crear_post_programado-aleatorio.feature
+- 111.crear_post_publicado-aletorio.feature
+- 112.editar_post-aletorio.feature
+- 113.eliminar_post-aletorio.feature
+- 114.crear_tag_con_nombre_y_descripcion-aleatorio.feature
+- 115.crear_tag_con_nombre_y_sin_descripcion-aleatorio.feature
+- 116.crear_tag_sin_nombre_y_con_descripcion-aleatorio.feature
+- 117.edit_info_usuario_aleatorio.feature
+- 118.invitar_usuario_aleatorio.feature
+- 119.invitar_usuario_email_invalido_aleatorio.feature
+- 120. edit_info_general_aleatorio.feature
 
 # Incidentes
 
@@ -193,7 +193,7 @@ Desde la carpeta raiz del proyecto, `GHOSTE2E-SEMANA7`  :
 
 
 ## Descripción de las estrategias usadas y cómo se integran estas estrategias en los escenarios de pruebas
-# Pool de datos a-priori. 
+# Pool de datos a-priori
 Pra estos datos, se genero un dataset con la aplicacion mockaroo que se incluyo dentro del repositorio. Este dataset contiene 100 paquetes de datos diferentes con las caracteristicas requeridas para las pruebas, como longitudes especificas, con caracteres especiales, formato email, etc. El archivo se encuentra en la siguinte ruta del repositorio `cypress-ghost\data-pool\a-priori-data.json`. 
 Adicionalmente, se crearon los metodos necesarios para hacer el llamado de los datos de manera aleatorio, estos se encuentran en la siguiente ruta `cypress-ghost\cypress\helpers\prioriData.js`.
 Dentro de los archivos de los escenarios de prueba identificados el texto `-apriori` al final del nombre, se importo este archivo y llama el metodo segun el dato requerido.
