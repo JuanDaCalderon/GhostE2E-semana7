@@ -6,7 +6,7 @@ import PrioriDataPool from "../../helpers/prioriData.js";
 let postData = {
     title: PrioriDataPool.getRandomShortSentence(),
     description: PrioriDataPool.getRandomLongSentence(),
-    excerpt: PrioriDataPool.getRandomText301()
+    excerpt: PrioriDataPool.getRandomText300()
 }
 
 const nameScreenshots = '"crear_post_programado_p';
