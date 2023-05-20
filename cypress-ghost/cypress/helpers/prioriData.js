@@ -81,6 +81,36 @@ class PrioriDataPool {
         const index = this.getRandomIndex(100);
         return this.dataPool[index].numberAndSpecialChar;
     }
+
+    getRandomText100() {
+        const index = this.getRandomIndex(100);
+        return this.dataPool[index].text_100;
+    }
+
+    getRandomText255() {
+        const index = this.getRandomIndex(100);
+        return this.dataPool[index].text_255;
+    }
+
+    getRandomText256() {
+        const index = this.getRandomIndex(100);
+        return this.dataPool[index].text_256;
+    }
+
+    getRandomText299() {
+        const index = this.getRandomIndex(100);
+        return this.dataPool[index].text_299;
+    }
+
+    getRandomText300() {
+        const index = this.getRandomIndex(100);
+        return this.dataPool[index].text_300;
+    }
+
+    getRandomText301() {
+        const index = this.getRandomIndex(100);
+        return this.dataPool[index].text_301;
+    }
 }
 
 
