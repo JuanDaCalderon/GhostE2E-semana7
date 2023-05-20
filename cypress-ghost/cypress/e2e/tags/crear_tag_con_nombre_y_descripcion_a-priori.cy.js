@@ -6,8 +6,8 @@ import PrioriDataPool from "../../helpers/prioriData.js";
 const nameScreenshots = 'tags/crear_tag/crear_tag_con_nombre_y_descripcion';
 
 const tagData = {
-    name: PrioriDataPool.getRandomFirstName(),
-    description: PrioriDataPool.getRandomShortSentence()
+    name: PrioriDataPool.getRandomtagName20(),
+    description: PrioriDataPool.getRandomtagDescription80()
 }
 
 describe('Escenarios tags', () => {
