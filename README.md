@@ -53,22 +53,22 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 31. Editar post titulo y contenido
 32. Eiminar post
 
-33.  invitar usuario con correo valido 
-34.  invitar usuario con correo invalido
-35.  editar informacion general, titulo y descripción
-36.  editar informacion general, titulo y descripción con caracteres especiales y numeros
-37.  editar informacion staff, full name limite superior
-38.  editar informacion staff, slug limite superior
-39.  editar informacion staff, con email invalido
-40.  editar informacion staff, con location limite superior
-41.  editar informacion staff, con website invalido
-42.  editar informacion staff, con facebok limite superior
-43.  editar informacion staff, con twitter no valido
-44.  editar informacion staff, Bio limite superior 
-45.  editar informacion staff, cambiar password
-46.  editar informacion staff, old password vacio
-47.  editar informacion staff, new password y verify password diferentes
-48.  editar informacion staff, new password manos de 10 caracteres
+33.  invitar usuario con correo valido aleatorio
+34.  invitar usuario con correo invalido aleatorio
+35.  editar informacion general, titulo y descripción aleatorio
+36.  editar informacion general, titulo y descripción con caracteres especiales y numeros aleatorio
+37.  editar informacion staff, full name limite superior aleatorio
+38.  editar informacion staff, slug limite superior aleatorio
+39.  editar informacion staff, con email invalido aleatorio
+40.  editar informacion staff, con location limite superior aleatorio
+41.  editar informacion staff, con website invalido aleatorio
+42.  editar informacion staff, con facebok limite superior aleatorio
+43.  editar informacion staff, con twitter no valido aleatorio
+44.  editar informacion staff, Bio limite superior aleatorio  
+45.  editar informacion staff, cambiar password aleatorio
+46.  editar informacion staff, old password vacio aleatorio
+47.  editar informacion staff, new password y verify password diferentes aleatorio
+48.  editar informacion staff, new password menos de 10 caracteres aleatorio
 
 49.  Página, crear página con titulo de menos de 255 caracteres y descripción y publicarla
 50.  Página, crear página con titulo de menos de 255 caracteres y descripción y dejarla en borrador
