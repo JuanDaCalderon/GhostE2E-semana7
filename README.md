@@ -201,6 +201,6 @@ Para esto, en la aplicacion mockaro se creo un esquema llamado `pseudo-data-pool
 En el repositorio se incluyo el archivo `cypress-ghost\cypress\helpers\apiData.js` que incluye la clase creada con los metodos para la conexion y la recuperacion de los datos desde la aplicacion. 
 Dentro de los archivos de los escenarios de prueba identificados el texto `-api` al final del nombre, se importo esta la clase y se hace el consumo del dato requerido.
 
-# escenario aleatorio
+# Escenario aleatorio
 Para esto, se instalo la libreria faker.
 Dentro de los archivos de los escenarios de prueba identificados el texto `-aleatorio` al final del nombre, se importo la libreria y se incluyen los metodos de faker segun el dato requerido.
