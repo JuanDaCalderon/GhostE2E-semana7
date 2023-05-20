@@ -19,8 +19,8 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 - General settings
 
 ## 120 Escenarios de pruebas con generación de datos
-A continuacion se listan los escenarios desarrollados em cypress y en Kraken.
-EL data pool utilizado se identifica al final del nombre del escenario despues del simbolo `-`, apriori, api y aleatorio
+A continuacion se listan los escenarios desarrollados en cypress y en Kraken.
+El data pool utilizado se identifica al final del nombre del escenario despues del simbolo `-`, apriori, api y aleatorio
 
 De igual forma, para facilidad, los archivos se agrupan por funcionalidad en carpetas dentro del arbol del repositorio, tanto para cypress como para Kraken  
 
@@ -28,20 +28,20 @@ De igual forma, para facilidad, los archivos se agrupan por funcionalidad en car
 01.login_success-aleatorio.cy.js
 02.login_invalid_password-aleatorio.cy.js
 03.login_fake_email-aleatorio.cy.js
-04.login_correo_valido_contrase¤a_vacia.cy.js
-05.login_correo_vacio_contrase¤a_valida.cy.js
-06.login_correo_invalido_sin_@.cy.js
-07.login_click_forgotpassword_sin_correo.cy.js
-08.login_click_forgotpassword_con_correo.cy.js
-09.crear_tag_con_nombre_y_descripcion.cy.js
-10.crear_tag_sin_nombre_y_con_descripcion.cy.js
-11.crear_tag_con_nombre_y_sin_descripcion.cy.js
-12.crear_tag_nombre_menos191_y_descripcion_menos500.cy.js
-13.crear_tag_nombre_mas191_y_descripcion_mas500.cy.js
-14.crear_tag_nombre_menos191_y_descripcion_mas500.cy.js
-15.crear_tag_nombre_mas191_y_descripcion_menos500.cy.js
-16.crear_tag_nombre_caracter_especial_y_numero.cy.js
-17.crear_tag_descripcion_caracter_especial_y_numero.cy.js
+04.login_correo_valido_contrase¤a_vacia-a-priori.cy.js
+05.login_correo_vacio_contrase¤a_valida-a-priori.cy.js
+06.login_correo_invalido_sin_@-aleatorio.cy.js
+07.login_click_forgotpassword_sin_correo-a-priori.cy.js
+08.login_click_forgotpassword_con_correo-a-priori.cy.js
+09.crear_tag_con_nombre_y_descripcion-aleatorio.cy.js
+10.crear_tag_sin_nombre_y_con_descripcion-aleatorio.cy.js
+11.crear_tag_con_nombre_y_sin_descripcion-aleatorio.cy.js
+12.crear_tag_nombre_menos191_y_descripcion_menos500-aleatorio.cy.js
+13.crear_tag_nombre_mas191_y_descripcion_mas500-aleatorio.cy.js
+14.crear_tag_nombre_menos191_y_descripcion_mas500-aleatorio.cy.js
+15.crear_tag_nombre_mas191_y_descripcion_menos500-aleatorio.cy.js
+16.crear_tag_nombre_caracter_especial_y_numero-aleatorio.cy.js
+17.crear_tag_descripcion_caracter_especial_y_numero-aleatorio.cy.js
 18.Crear_post_borrador-aleatorio.cy.js
 19.Crear_post_programado_excerpt_299_caract-aleatorio.cy.js
 20.Crear_post_programado_excerpt_300_caract.-aleatorio.cy.js
@@ -85,8 +85,8 @@ De igual forma, para facilidad, los archivos se agrupan por funcionalidad en car
 58.editar_url_caracteres_especiales-api.cy.js
 59.editar_excerpt_menos_300-api.cy.js
 60.editar_excerpt_mas_300-api.cy.js
-61.login_click_forgotpassword_con_correo_apriori.cy.js
-62.login_correo_invalido_sin_@_apriori.cy.js
+61.login_click_forgotpassword_con_correo-a-priori.cy.js
+62.login_correo_invalido_sin_@-a-priori.cy.js
 63.crear_tag_con_nombre_y_descripcion_a-priori.cy.js
 64.crear_tag_con_nombre_y_sin_descripcion_a-priori.cy.js
 65.crear_tag_descripcion_caracter_especial_y_numero_a-priori.cy.js
@@ -119,6 +119,8 @@ De igual forma, para facilidad, los archivos se agrupan por funcionalidad en car
 92.editar_url_caracteres_especiales-priori.cy.js
 93.editar_excerpt_menos_300-priori.cy.js
 94.editar_excerpt_mas_300-priori.cy.js
+95.login_correo_vacio_contraseña_valida_a-priori.cy.js
+96.login_correo_valido_contraseña_vacia_a-priori.cy.js
 
 # Kraken
 101.login_correo_invalido_sin_@-aleatorio.feature
