@@ -1,10 +1,10 @@
-import { faker } from '@faker-js/faker';
+import PrioriDataPool from "../../helpers/prioriData.js";
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import Usuario from "../../page-object/usuario";
 
 let postData = {
-  mail: faker.random.alphaNumeric(20)
+  mail: PrioriDataPool.getRandomShortSentence()
 }
 
 describe('invitar usuario', () => {
