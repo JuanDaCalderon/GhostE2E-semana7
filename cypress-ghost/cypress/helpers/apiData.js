@@ -47,6 +47,42 @@ class ApiDataPool {
         const dataPool = await response.json();
         return dataPool.Naughty;
     }
+    
+    async getRandomText100() {
+        const response = await fetch("https://my.api.mockaroo.com/data-pool.json?key=7d257dd0");
+        const dataPool = await response.json();
+        return dataPool.text_100;
+    }
+
+    async getRandomText255() {
+        const response = await fetch("https://my.api.mockaroo.com/data-pool.json?key=7d257dd0");
+        const dataPool = await response.json();
+        return dataPool.text_255;
+    }
+
+    async getRandomText256() {
+        const response = await fetch("https://my.api.mockaroo.com/data-pool.json?key=7d257dd0");
+        const dataPool = await response.json();
+        return dataPool.text_256;
+    }
+
+    async getRandomText299() {
+        const response = await fetch("https://my.api.mockaroo.com/data-pool.json?key=7d257dd0");
+        const dataPool = await response.json();
+        return dataPool.text_299;
+    }
+
+    async getRandomText300() {
+        const response = await fetch("https://my.api.mockaroo.com/data-pool.json?key=7d257dd0");
+        const dataPool = await response.json();
+        return dataPool.text_300;
+    }
+
+    async getRandomText301() {
+        const response = await fetch("https://my.api.mockaroo.com/data-pool.json?key=7d257dd0");
+        const dataPool = await response.json();
+        return dataPool.text_301;
+    }
 }
 
 
