@@ -14,7 +14,7 @@ Scenario: Se inicia sesion y se va al menu staff para invitar un usuario
     And I wait for 2 seconds
     And I click invite
     And I wait for 2 seconds
-    When I enter mailinvita "<invitemail>"
+    When I enter mailinvita "$email_1"
     And I wait for 2 seconds
     When I select role "<role>"
     And I wait for 2 seconds

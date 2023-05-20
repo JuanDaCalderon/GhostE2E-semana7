@@ -1,7 +1,7 @@
-Feature: Editar informacion del usuario
+Feature: Editar informacion general
 
 @user1 @web
-    Scenario: se ingresa y se edita la informacion del usuario
+Scenario: Se inicia sesion y se va al menu staff para invitar un usuario
     Given I navigate to page "http://localhost:2368/ghost"
     And I wait for 5 seconds
     When I enter email "<Usuario1>"
@@ -10,14 +10,13 @@ Feature: Editar informacion del usuario
     And I wait for 2 seconds
     And I click next
     And I wait for 2 seconds
-    And I click staff
+    And I click General
     And I wait for 2 seconds
-    And I click usuario
+    And I click expand
     And I wait for 2 seconds
-    And I enter fullname "<fullname>"
+    And I enter title "$name_1"
     And I wait for 2 seconds
-    And I click savename
+    And I enter descripcion "$string_2"
     And I wait for 2 seconds
-    And I click staff
+    And I click savegeneral
     And I wait for 2 seconds
-    Then I check Name with fullname "<fullname>" is in the list
