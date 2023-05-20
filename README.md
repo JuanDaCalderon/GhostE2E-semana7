@@ -120,7 +120,7 @@ De igual forma, para facilidad, los archivos se agrupan por funcionalidad en car
 - 93.editar_excerpt_menos_300-priori.cy.js
 - 94.editar_excerpt_mas_300-priori.cy.js
 - 
-- # Kraken
+# Kraken
 - 101.login_correo_invalido_sin_@-aleatorio.feature
 - 102.login_correo_vacio_contrase¤a_valida-aleatorio.feature
 - 103.login_correo_valido_contrase¤a_vacia-aleatorio.feature
