@@ -1,4 +1,4 @@
-# README Entrega semana 67
+# README Entrega semana 7
 
 ## Grupo 12
 - Leonardo Barrios 
