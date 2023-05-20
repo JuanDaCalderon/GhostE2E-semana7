@@ -4,9 +4,9 @@ import loginPage from "../../page-object/login";
 import Usuario from "../../page-object/usuario";
 
 let postData = {
-  password: faker.internet.password(9),
-  password_new: faker.internet.password(9),
-  password_verification: faker.internet.password(9)
+  password: PrioriDataPool.getRandomPassword9(),
+  password_new: PrioriDataPool.getRandomPassword9(),
+  password_verification: PrioriDataPool.getRandomPassword9()
 }
 
 

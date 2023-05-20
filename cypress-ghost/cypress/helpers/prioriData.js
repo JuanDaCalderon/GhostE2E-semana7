@@ -27,6 +27,11 @@ class PrioriDataPool {
         return this.dataPool[index].password;
     }
 
+    getRandomPassword9() {
+        const index = this.getRandomIndex(100);
+        return this.dataPool[index].password9char;
+    }
+
     getRandomShortSentence() {
         const index = this.getRandomIndex(100);
         return this.dataPool[index].short_sentence;
