@@ -2,6 +2,13 @@ import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import Usuario from "../../page-object/usuario";
 
+let postData = {
+  name: faker.name.fullName(500),
+  description: faker.random.alpha(100),
+  excerpt: faker.random.alpha(299)
+}
+
+
 describe('editar usuario', () => {
     it('Se hace editar al usuario', () => {
       //Given I navigate to page "http://localhost:2368/ghost"  
@@ -22,7 +29,7 @@ describe('editar usuario', () => {
       cy.screenshot("editar_usuario_p3");
 
       //And I enter user name
-      cy.get('input[id="user-name"]').clear().type('pruebas automatizadas 2',{force: true})
+      cy.get('input[id="user-name"]').clear().type(postData.name,{force: true})
       cy.wait(2000)
       cy.screenshot("editar_usuario_p4");
 
