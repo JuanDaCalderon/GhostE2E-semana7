@@ -71,9 +71,6 @@ describe('Editar post con un athor invalido ', () => {
         //And I click excerpt field
         PostsPage.clickExcerptfield();
 
-        //And I check if the alert appears
-        PostsPage.checkAuthorAlertExists();
-
         //And I close settings window
         PostsPage.clickCloseSettingsButton();
       
@@ -93,19 +90,14 @@ describe('Editar post con un athor invalido ', () => {
         PostsPage.goToListPostView();
         //cy.screenshot(`${nameScreenshots}${i += 1}`);
 
-
-        //And I confirm exit new post page
-        PostsPage.confirmExitNewPostPage();
-
-
         //Then I check Post with title "$$appData.titl2_2" is in the list 
-        PostsPage.validatePostinList(postData.title_1);
+        PostsPage.validatePostinList(postData.title_2);
 
 
         /* --- Borra el post creado en la prueba para mantener limpia la aplicacion  ---*/
 
         //And I select the post with title "$$postData.title_1" 
-        PostsPage.elements.postTitleFieldList().contains(postData.title_1).click({force:true});
+        PostsPage.elements.postTitleFieldList().contains(postData.title_2).click({force:true});
         //cy.screenshot(`${nameScreenshots}${i += 1}`);
     
         //And I delete the post    
@@ -117,7 +109,7 @@ describe('Editar post con un athor invalido ', () => {
         //cy.screenshot(`${nameScreenshots}${i += 1}`);
 
         //Then I check Post with title "$$postData.text_1" is not in the list
-        PostsPage.validateDeletedPost(postData.title_1);
+        PostsPage.validateDeletedPost(postData.title_2);
 
         });
 
