@@ -1,4 +1,4 @@
-# README Entrega semana 67
+# README Entrega semana 7
 
 ## Grupo 12
 - Leonardo Barrios 
@@ -83,7 +83,10 @@ https://github.com/JuanDaCalderon/GhostE2E-semana7
 59.  Página, editar el campo Excerpt de la página con una cadena de menos de 300 caracteres
 60.  Página, editar el campo Excerpt de la página con una cadena de mas de 300 caracteres
 
+# Incidentes
 
+- Usuario en campo de facebook, no tiene limite de caracteres
+- Usuario en campo de slug, no tiene limite de caracteres
 
 
 # Instrucciones para ejecutar tests - Kraken
