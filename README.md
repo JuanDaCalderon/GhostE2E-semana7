@@ -121,6 +121,10 @@ De igual forma, para facilidad, los archivos se agrupan por funcionalidad en car
 94.editar_excerpt_mas_300-priori.cy.js
 95.login_correo_vacio_contraseña_valida_a-priori.cy.js
 96.login_correo_valido_contraseña_vacia_a-priori.cy.js
+97.invitar_usuario_con_correo_valido_apriori.cy.js
+98.invitar_usuario_con_correo_invalido_apriori.cy.js
+99.editar_informacion_staff_full_name_limite_superior_apriori.cy.js
+100.editar_informacion_staff_slug_limite_superior_apriori.cy.js
 
 # Kraken
 - 101.login_correo_invalido_sin_@-aleatorio.feature
