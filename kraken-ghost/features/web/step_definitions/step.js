@@ -126,9 +126,9 @@ Then('I check if it is schedule', async function() {
     return expect(pageName).to.contain('Will be published in');
 });
 
-Then('I check if Draft is first', async function() {
+Then('I check if Draft is {kraken-string} first', async function(title) {
     let draftTitle = await this.driver.$("main.gh-main section.content-list ol li:nth-child(2) h3.gh-content-entry-title").getText();
-    return expect(draftTitle).to.contain('draft');
+    return expect(draftTitle).to.contain(title);
 });
 
 /* /Check thens */
@@ -160,9 +160,9 @@ When('I click newTag', async function() {
     return await element.click();
 })
 
-When('I enter tagname {kraken-string}', async function (tagname1) {
+When('I enter tagname {kraken-string}', async function (text) {
     let element = await this.driver.$('#tag-name');
-    return await element.setValue(tagname1);
+    return await element.setValue(text);
 })
 
 When('I enter tagdescription {kraken-string}', async function (tagdescription) {
@@ -207,6 +207,11 @@ When('I click eliminartag', async function() {
 
 When('I click confirmareliminaciontag', async function() {
     let element = await this.driver.$('button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]');
+    return await element.click();
+})
+
+When('I click leavetag', async function() {
+    let element = await this.driver.$('button[class="gh-btn gh-btn-red"]');
     return await element.click();
 })
 
