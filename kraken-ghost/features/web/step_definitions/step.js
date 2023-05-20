@@ -126,9 +126,9 @@ Then('I check if it is schedule', async function() {
     return expect(pageName).to.contain('Will be published in');
 });
 
-Then('I check if Draft is first', async function() {
+Then('I check if Draft is {kraken-string} first', async function(title) {
     let draftTitle = await this.driver.$("main.gh-main section.content-list ol li:nth-child(2) h3.gh-content-entry-title").getText();
-    return expect(draftTitle).to.contain('draft');
+    return expect(draftTitle).to.contain(title);
 });
 
 /* /Check thens */
