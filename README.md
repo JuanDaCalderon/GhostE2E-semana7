@@ -191,10 +191,13 @@ Desde la carpeta raiz del proyecto, `GHOSTE2E-SEMANA7`  :
 
 
 ##Descripción de las estrategias usadas y cómo se integran estas estrategias en los escenarios de pruebas
-# pool de datos a-priori. `
-Se genero un archivo de datos con la herramienta mockaroo con 100 paquetes de datos diferentes con las caracteristicas requeridas para las pruebas, como longitud, que contenga carateres especiales, formato email. El archivo se encuentra en la siguinte ruta del repositorio `cypress-ghost\data-pool\a-priori-data.json`. Adionalmente, se crearon los metodos necesarios para hacer el llamado de los datos, estos se encuentran en la siguiente ruta `cypress-ghost\cypress\helpers\prioriData.js`.
-Dentro de los archivos de los escenarios de prueba se importo este archivo y llamaba em metodo segun el tipo de
+# Pool de datos a-priori. `
+Pra estos datos, se genero un dataset con la aplicacion mockaroo que se incluyo dentro del repositorio. Este dataset contiene 100 paquetes de datos diferentes con las caracteristicas requeridas para las pruebas, como longitudes especificas, con caracteres especiales, formato email, etc. El archivo se encuentra en la siguinte ruta del repositorio `cypress-ghost\data-pool\a-priori-data.json`. 
+Adicionalmente, se crearon los metodos necesarios para hacer el llamado de los datos de manera aleatorio, estos se encuentran en la siguiente ruta `cypress-ghost\cypress\helpers\prioriData.js`.
+Dentro de los archivos de los escenarios de prueba se importo este archivo y llama el metodo segun el dato requerido.
 
+# Pool de datos (pesudo)
+Para esto, en la aplicacion mockarro se creo un esquema llamado `pseudo-data-pool` que se consume a traves de 
 
 
 
