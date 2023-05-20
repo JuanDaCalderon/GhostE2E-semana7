@@ -160,9 +160,9 @@ When('I click newTag', async function() {
     return await element.click();
 })
 
-When('I enter tagname {kraken-string}', async function (tagname1) {
+When('I enter tagname {kraken-string}', async function (text) {
     let element = await this.driver.$('#tag-name');
-    return await element.setValue(tagname1);
+    return await element.setValue(text);
 })
 
 When('I enter tagdescription {kraken-string}', async function (tagdescription) {
@@ -207,6 +207,11 @@ When('I click eliminartag', async function() {
 
 When('I click confirmareliminaciontag', async function() {
     let element = await this.driver.$('button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]');
+    return await element.click();
+})
+
+When('I click leavetag', async function() {
+    let element = await this.driver.$('button[class="gh-btn gh-btn-red"]');
     return await element.click();
 })
 
