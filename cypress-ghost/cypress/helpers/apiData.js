@@ -52,6 +52,35 @@ class ApiDataPool {
         const dataPool = await this.getUrlResponse();
         return dataPool.word;
     }
+    async getRandomText100() {
+        const dataPool = await this.getUrlResponse();
+        return dataPool.text_100;
+    }
+
+    async getRandomText255() {
+        const dataPool = await this.getUrlResponse();
+        return dataPool.text_255;
+    }
+
+    async getRandomText256() {
+        const dataPool = await this.getUrlResponse();
+        return dataPool.text_256;
+    }
+
+    async getRandomText299() {
+        const dataPool = await this.getUrlResponse();
+        return dataPool.text_299;
+    }
+
+    async getRandomText300() {
+        const dataPool = await this.getUrlResponse();
+        return dataPool.text_300;
+    }
+
+    async getRandomText301() {
+        const dataPool = await this.getUrlResponse();
+        return dataPool.text_301;
+    }
 }
 
 
