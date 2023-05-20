@@ -136,28 +136,30 @@ De igual forma, para facilidad, los archivos se agrupan por funcionalidad en car
 109.editar_informacion_staff_new_password_y_verify_password_diferentes_apriori.cy.js
 110.editar_informacion_staff_new_password_menos_de_10_caracteres_apriori.cy.js
 111.editar_usuario_apriori.cy.js
+112.editar_informacion_general_titulo_y_descripción_apriori.cy.js
+113.editar_informacion_general_titulo_y_descripción_con_caracteres_especiales_y_numeros_apriori.cy.js
 
 # Kraken
-- 112.login_correo_invalido_sin_@-aleatorio.feature
-- 113.login_correo_vacio_contrase¤a_valida-aleatorio.feature
-- 114.login_correo_valido_contrase¤a_vacia-aleatorio.feature
-- 115.crear_page_schedule-aleatorio.feature
-- 116.crear_page-aleatorio.feature
-- 117.editar_page-aleatorio.feature
-- 118.eliminar_page-aleatorio.feature
-- 119.filtrar_pagina-aleatorio.feature
-- 120.crear_post_borrador-aletorio.feature
-- 121.crear_post_programado-aleatorio.feature
-- 122.crear_post_publicado-aletorio.feature
-- 123.editar_post-aletorio.feature
-- 124.eliminar_post-aletorio.feature
-- 125.crear_tag_con_nombre_y_descripcion-aleatorio.feature
-- 126.crear_tag_con_nombre_y_sin_descripcion-aleatorio.feature
-- 127.crear_tag_sin_nombre_y_con_descripcion-aleatorio.feature
-- 128.edit_info_usuario_aleatorio.feature
-- 129.invitar_usuario_aleatorio.feature
-- 130.invitar_usuario_email_invalido_aleatorio.feature
-- 131.edit_info_general_aleatorio.feature
+- 114.login_correo_invalido_sin_@-aleatorio.feature
+- 115.login_correo_vacio_contrase¤a_valida-aleatorio.feature
+- 116.login_correo_valido_contrase¤a_vacia-aleatorio.feature
+- 117.crear_page_schedule-aleatorio.feature
+- 118.crear_page-aleatorio.feature
+- 119.editar_page-aleatorio.feature
+- 120.eliminar_page-aleatorio.feature
+- 121.filtrar_pagina-aleatorio.feature
+- 122.crear_post_borrador-aletorio.feature
+- 123.crear_post_programado-aleatorio.feature
+- 124.crear_post_publicado-aletorio.feature
+- 125.editar_post-aletorio.feature
+- 126.eliminar_post-aletorio.feature
+- 127.crear_tag_con_nombre_y_descripcion-aleatorio.feature
+- 128.crear_tag_con_nombre_y_sin_descripcion-aleatorio.feature
+- 129.crear_tag_sin_nombre_y_con_descripcion-aleatorio.feature
+- 130.edit_info_usuario_aleatorio.feature
+- 131.invitar_usuario_aleatorio.feature
+- 132.invitar_usuario_email_invalido_aleatorio.feature
+- 133.edit_info_general_aleatorio.feature
 
 # Incidentes
 

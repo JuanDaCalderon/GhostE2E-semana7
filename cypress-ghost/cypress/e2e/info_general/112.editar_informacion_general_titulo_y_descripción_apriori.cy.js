@@ -47,9 +47,5 @@ describe('edit info general', () => {
       //then
       Usuario.validateErrorTextFeedback('Description is too long');
 
-      //And I click Expand 
-      //cy.get('button[data-ember-action-65="65"]').click()
-      //cy.wait(2000)
-      //cy.screenshot("editar_info_general_p6");
     })
 })

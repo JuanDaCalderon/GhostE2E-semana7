@@ -23,7 +23,7 @@ describe('edit info general', () => {
       cy.screenshot("editar_info_general_p2");
 
       //And I click Expand 
-      cy.get('button[data-ember-action-65="65"]').click()
+      cy.get('button[data-ember-action-74="74"]').click()
       cy.wait(2000)
       cy.screenshot("editar_info_general_p3");
 
@@ -44,7 +44,7 @@ describe('edit info general', () => {
       cy.screenshot("editar_info_general_p5");
 
       //And I click Expand 
-      cy.get('button[data-ember-action-65="65"]').click()
+      cy.get('button[data-ember-action-74="74"]').click()
       cy.wait(2000)
       cy.screenshot("editar_info_general_p6");
     })
