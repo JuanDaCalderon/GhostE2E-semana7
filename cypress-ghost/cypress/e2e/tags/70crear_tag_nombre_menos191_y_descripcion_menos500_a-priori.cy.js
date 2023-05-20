@@ -1,13 +1,13 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import TagsTag from "../../page-object/tags";
-import { faker } from '@faker-js/faker';
+import PrioriDataPool from "../../helpers/prioriData.js";
 
 const nameScreenshots = 'tags/crear_tag/crear_tag_nombre_menos191_descripcion_menos500';
 
 const tagData = {
-    name: faker.random.alpha(190),
-    description: faker.random.alpha(499)
+    name: PrioriDataPool.getRandomtagName190(),
+    description: PrioriDataPool.getRandomtagDescription499()
 }
 
 describe('Escenarios tags', () => {
