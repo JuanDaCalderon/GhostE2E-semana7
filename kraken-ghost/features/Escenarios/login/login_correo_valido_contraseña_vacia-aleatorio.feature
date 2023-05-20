@@ -7,3 +7,4 @@ Scenario: Se crea un tag desde el inicio de sesión hasta la finalización de la
     When I enter email "$email_1"
     And I wait for 2 seconds
     And I click next
+    Then I wait
