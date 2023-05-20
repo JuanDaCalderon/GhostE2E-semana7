@@ -26,7 +26,7 @@ class PostsPage {
     
         excerptField: () => cy.get('#custom-excerpt'),
         featureCheckbox: () => cy.get('p').contains('Feature this'),
-        deleteAuthorButton: () => cy.get('.ember-power-select-multiple-remove-btn'),
+        deleteAuthorButton: () => cy.get('span.ember-power-select-multiple-remove-btn > svg '),
         authorInput: () => cy.get('.ember-power-select-trigger-multiple-input').last(),
         authorAlert: () => cy.get('p').contains('At least one author is required.'),
 

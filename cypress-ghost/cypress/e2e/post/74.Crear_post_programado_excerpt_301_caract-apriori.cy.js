@@ -60,6 +60,9 @@ it('Se crea un post programado digitando excerpt con 299 caracteres- se valida q
      PostsPage.goToListPostView();
      //cy.screenshot(`${nameScreenshots}${i += 1}`);
 
+    //And I confirm exit psot page
+    PostsPage.confirmExitNewPostPage();
+
      //And I click published posts menu 
      PostsPage.goToScheduledFilter();
      //cy.screenshot(`${nameScreenshots}${i += 1}`);
