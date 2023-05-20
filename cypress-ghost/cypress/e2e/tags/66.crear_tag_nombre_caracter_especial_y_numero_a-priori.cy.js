@@ -1,16 +1,14 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import TagsTag from "../../page-object/tags";
-import { faker } from '@faker-js/faker';
+import PrioriDataPool from "../../helpers/prioriData.js";
 
 const nameScreenshots = 'tags/crear_tag/crear_tag_nombre_charespecial_y_numero';
 
-const chars = ['@', '#', '$', '%', '&', '!'];
-const specialChar = chars[Math.floor(Math.random() * chars.length)];
 const tagData = {
-    name: faker.random.alphaNumeric(5) + specialChar + specialChar,
-    description: faker.random.alphaNumeric(10)
-};
+    name: PrioriDataPool.getRandomnumberAndSpecialChar(),
+    description: PrioriDataPool.getRandomtagDescription499()
+}
 
 describe('Escenarios tags', () => {
     it('Crear tag con nombre con caracteres especiales y números', () => {
