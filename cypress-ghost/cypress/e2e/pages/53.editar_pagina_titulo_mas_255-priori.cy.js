@@ -1,18 +1,17 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import PagesPage from "../../page-object/pages";
-import { faker } from '@faker-js/faker';
+import PrioriDataPool from "../../helpers/prioriData";
 
-const nameScreenshots = 'pages/page_url/page_url_';
-
+const nameScreenshots = 'pages/page_edit_titulo_mas_255/page_edit_titulo_mas_255_';
 const pageData = {
-    title: faker.lorem.sentence(5),
-    description: faker.lorem.paragraphs(1),
-    url: faker.lorem.sentence(1)
+    title: PrioriDataPool.getRandomShortSentence(),
+    titleToEdit: PrioriDataPool.getRandomLongSentence(),
+    description: PrioriDataPool.getRandomShortSentence()
 }
 
 describe('Escenarios page', () => {
-    it('Página, editar la URL de la página con un texto valido', () => {
+    it('Página, editar el titulo de una página con un titulo de mas de 255 caracteres', () => {
         let i = 0
         // Given
         cy.visit(configJson.host);
@@ -34,18 +33,18 @@ describe('Escenarios page', () => {
         newPage.contains(pageData.title).should('exist');
         newPage.click();
 
-        PagesPage.changeUrlTo(pageData.url);
-
+        PagesPage.typeTitle(pageData.titleToEdit);
         PagesPage.publishPage();
 
-        PagesPage.goToAnchorButtonPage();
-
         // Then
-        cy.get("h3.gh-content-entry-title").contains(pageData.title).should('exist');
+        cy.get("div.gh-alert-content").contains('Title cannot be longer than 255 characters').should('exist');
         cy.screenshot(`${nameScreenshots}${i += 1}`, { overwrite: true });
 
         // Clean the enviroment tested
+        PagesPage.goToAnchorButtonPage();
+        PagesPage.clickOnRedModalButton();
         PagesPage.cleanRecentPage(cy.get("h3.gh-content-entry-title").contains(pageData.title));
+
     });
 })
 

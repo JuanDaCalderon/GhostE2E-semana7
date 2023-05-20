@@ -1,21 +1,19 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import PagesPage from "../../page-object/pages";
-import PrioriDataPool from "../../helpers/prioriData.js";
-import { faker } from '@faker-js/faker';
+import ApiDataPool from '../../helpers/apiData';
 
-const nameScreenshots = 'pages/page_excerpt_menos_300/page_excerpt_menos_300_';
+const nameScreenshots = 'pages/page_sin_titulo/page_sin_titulo_';
 
-const pageData = {
-    title: faker.lorem.sentence(3),
-    description: faker.lorem.paragraphs(1),
-    excerpt: PrioriDataPool.getRandomShortSentence()
-}
 
 describe('Escenarios page', () => {
-    it('Página, editar el campo Excerpt de la página con una cadena de menos de 300 caracteres', () => {
-        let i = 0
+    it('Página, crear página con contenido pero sin titulo y publicarla', async () => {
         // Given
+        const pageData = {
+            title: '(Untitled)',
+            description: await ApiDataPool.getRandomLongSentence()
+        }
+        let i = 0
         cy.visit(configJson.host);
 
         // When
@@ -24,18 +22,7 @@ describe('Escenarios page', () => {
 
         PagesPage.goToNewPageFromListPageView();
 
-        PagesPage.typeTitleAndDescription(pageData.title, pageData.description);
-
-        PagesPage.publishPage();
-
-        PagesPage.goToAnchorButtonPage();
-
-        const newPage = cy.get("h3.gh-content-entry-title");
-
-        newPage.contains(pageData.title).should('exist');
-        newPage.click();
-
-        PagesPage.changeExcerptTo(pageData.excerpt);
+        PagesPage.typedescription(pageData.description);
 
         PagesPage.publishPage();
 
@@ -47,6 +34,7 @@ describe('Escenarios page', () => {
 
         // Clean the enviroment tested
         PagesPage.cleanRecentPage(cy.get("h3.gh-content-entry-title").contains(pageData.title));
+
     });
 })
 

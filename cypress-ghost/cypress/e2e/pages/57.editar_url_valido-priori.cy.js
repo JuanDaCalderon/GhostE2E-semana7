@@ -1,19 +1,19 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import PagesPage from "../../page-object/pages";
-import { faker } from '@faker-js/faker';
+import PrioriDataPool from "../../helpers/prioriData";
 
-const nameScreenshots = 'pages/page_sin_titulo/page_sin_titulo_';
-
+const nameScreenshots = 'pages/page_url/page_url_';
 const pageData = {
-    title: '(Untitled)',
-    description: faker.lorem.paragraphs()
+    title: PrioriDataPool.getRandomShortSentence(),
+    description: PrioriDataPool.getRandomLongSentence(),
+    url: PrioriDataPool.getRandomWord()
 }
 
 describe('Escenarios page', () => {
-    it('Página, crear página con contenido pero sin titulo y publicarla', () => {
-        let i = 0
+    it('Página, editar la URL de la página con un texto valido', () => {
         // Given
+        let i = 0
         cy.visit(configJson.host);
 
         // When
@@ -22,7 +22,18 @@ describe('Escenarios page', () => {
 
         PagesPage.goToNewPageFromListPageView();
 
-        PagesPage.typedescription(pageData.description);
+        PagesPage.typeTitleAndDescription(pageData.title, pageData.description);
+
+        PagesPage.publishPage();
+
+        PagesPage.goToAnchorButtonPage();
+
+        const newPage = cy.get("h3.gh-content-entry-title");
+
+        newPage.contains(pageData.title).should('exist');
+        newPage.click();
+
+        PagesPage.changeUrlTo(pageData.url);
 
         PagesPage.publishPage();
 
@@ -34,7 +45,6 @@ describe('Escenarios page', () => {
 
         // Clean the enviroment tested
         PagesPage.cleanRecentPage(cy.get("h3.gh-content-entry-title").contains(pageData.title));
-
     });
 })
 

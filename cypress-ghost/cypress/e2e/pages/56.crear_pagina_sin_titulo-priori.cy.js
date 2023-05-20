@@ -1,19 +1,18 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import PagesPage from "../../page-object/pages";
-import { faker } from '@faker-js/faker';
+import PrioriDataPool from "../../helpers/prioriData";
 
-const nameScreenshots = 'pages/page_sin_descripcion/page_sin_descripcion_';
-
+const nameScreenshots = 'pages/page_sin_titulo/page_sin_titulo_';
 const pageData = {
-    title: faker.lorem.sentence(5),
-    description: ''
+    title: '(Untitled)',
+    description: PrioriDataPool.getRandomLongSentence()
 }
 
 describe('Escenarios page', () => {
-    it('Página, crear página con titulo pero sin descripción y publicarla', () => {
-        let i = 0
+    it('Página, crear página con contenido pero sin titulo y publicarla', () => {
         // Given
+        let i = 0
         cy.visit(configJson.host);
 
         // When
@@ -22,9 +21,8 @@ describe('Escenarios page', () => {
 
         PagesPage.goToNewPageFromListPageView();
 
-        PagesPage.typeTitleAndDescription(pageData.title, pageData.description);
+        PagesPage.typedescription(pageData.description);
 
-        PagesPage.elements.outsideClickElement().click();
         PagesPage.publishPage();
 
         PagesPage.goToAnchorButtonPage();

@@ -1,19 +1,19 @@
 import configJson from '../../../config/config.json';
 import loginPage from "../../page-object/login";
 import PagesPage from "../../page-object/pages";
-import PrioriDataPool from "../../helpers/prioriData.js";
+import PrioriDataPool from "../../helpers/prioriData";
 
-const nameScreenshots = 'pages/page_crear_caracteres_especiales/page_crear_caracteres_especiales_';
+const nameScreenshots = 'pages/page_schedule/page_schedule_';
 
 const pageData = {
-    title: PrioriDataPool.getRandomNaughty(),
-    description: PrioriDataPool.getRandomNaughty()
+    title: PrioriDataPool.getRandomShortSentence(),
+    description: PrioriDataPool.getRandomLongSentence()
 }
 
 describe('Escenarios page', () => {
-    it('Página, crear página con un titulo y una descripción con caracteres especiales y caracteres númericos', () => {
-        let i = 0
+    it('Página, crear página con titulo de menos de 255 caracteres y descripción y dejarla programada', () => {
         // Given
+        let i = 0
         cy.visit(configJson.host);
 
         // When
@@ -24,17 +24,17 @@ describe('Escenarios page', () => {
 
         PagesPage.typeTitleAndDescription(pageData.title, pageData.description);
 
-        PagesPage.publishPage();
+        PagesPage.schedulePage();
 
         PagesPage.goToAnchorButtonPage();
 
         // Then
         cy.get("h3.gh-content-entry-title").contains(pageData.title).should('exist');
+        cy.get("span[title='Scheduled']").contains('Scheduled').should('exist');
         cy.screenshot(`${nameScreenshots}${i += 1}`, { overwrite: true });
 
         // Clean the enviroment tested
         PagesPage.cleanRecentPage(cy.get("h3.gh-content-entry-title").contains(pageData.title));
-
     });
 })
 
